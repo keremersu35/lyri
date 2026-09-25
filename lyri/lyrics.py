@@ -8,7 +8,7 @@ import mutagen
 import requests
 
 API = "https://lrclib.net/api"
-HEADERS = {"User-Agent": "LyricsTimeStamper/0.1 (local tool)"}
+HEADERS = {"User-Agent": "lyri/0.1 (+https://github.com/keremersu35/lyri)"}
 
 LRC_TIME = re.compile(r"\[(\d+):(\d+(?:[.:]\d+)?)\]")
 _SECTIONS = r"(?:verse|chorus|pre-?chorus|post-?chorus|hook|bridge|intro|outro|refrain|interlude|instrumental)"

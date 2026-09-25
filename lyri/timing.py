@@ -2,7 +2,7 @@
 
 import numpy as np
 
-from lts.audio import FPS
+from lyri.audio import FPS
 
 
 def enforce_order(words: list[dict]) -> int:

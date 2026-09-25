@@ -1,4 +1,4 @@
-"""Command line: `lts app`, `lts process`, `lts video`, `lts serve`."""
+"""Command line: `lyri app`, `lyri process`, `lyri video`, `lyri serve`."""
 
 import argparse
 import contextlib
@@ -28,7 +28,7 @@ def parse_size(value: str) -> tuple[int, int]:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(prog="lts", description="Word-level timestamped lyrics for any song.")
+    ap = argparse.ArgumentParser(prog="lyri", description="Word-level timestamped lyrics for any song.")
     sub = ap.add_subparsers(dest="cmd", required=True)
 
     a = sub.add_parser("app", help="open the web app (upload, process, render videos)")
@@ -61,11 +61,11 @@ def main() -> None:
     args = ap.parse_args()
     # heavy imports (torch, transformers) only for the commands that need them
     if args.cmd == "app":
-        from lts.server import serve_app
+        from lyri.server import serve_app
 
         serve_app(args.port)
     elif args.cmd == "process":
-        from lts.pipeline import run
+        from lyri.pipeline import run
 
         if len(args.songs) > 1 and (args.artist or args.title or args.lyrics):
             ap.error("--artist/--title/--lyrics only make sense with a single song")
@@ -74,7 +74,7 @@ def main() -> None:
         if args.open:
             serve(work, 8765)
     elif args.cmd == "video":
-        from lts.render import render_video
+        from lyri.render import render_video
 
         w, h = (320, 240) if args.ipod else args.size
         options = {

@@ -2,10 +2,10 @@
 
 import numpy as np
 
-from lts.aligner import Aligner
-from lts.audio import FPS
-from lts.ctc import normalize_word
-from lts.lyrics import Lyrics
+from lyri.aligner import Aligner
+from lyri.audio import FPS
+from lyri.ctc import normalize_word
+from lyri.lyrics import Lyrics
 
 Timed = list[dict | None]  # per-word timings of one line
 

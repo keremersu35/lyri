@@ -1,7 +1,7 @@
 import numpy as np
 
-from lts.audio import FPS, HOP, SR
-from lts.vocals import apply_vocal_mask, runs, vocal_activity, vocal_mask
+from lyri.audio import FPS, HOP, SR
+from lyri.vocals import apply_vocal_mask, runs, vocal_activity, vocal_mask
 
 
 def tone(seconds: float, amp: float) -> np.ndarray:

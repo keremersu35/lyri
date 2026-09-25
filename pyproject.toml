@@ -1,5 +1,5 @@
 [project]
-name = "lyrics-timestamper"
+name = "lyri"
 version = "0.1.0"
 description = "Word-level timestamped lyrics for any song, plus Brat-style lyric videos"
 readme = "README.md"
@@ -31,7 +31,7 @@ dependencies = [
 environments = ["sys_platform == 'darwin' and platform_machine == 'arm64'"]
 
 [project.scripts]
-lts = "lts.cli:main"
+lyri = "lyri.cli:main"
 
 [build-system]
 requires = ["hatchling"]
@@ -44,7 +44,7 @@ dev = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["lts"]
+packages = ["lyri"]
 
 [tool.ruff]
 line-length = 120
@@ -54,7 +54,7 @@ target-version = "py312"
 select = ["E", "F", "W", "I", "B", "UP", "SIM"]
 
 [tool.ruff.lint.per-file-ignores]
-"lts/export.py" = ["E501"]  # ASS format declarations are single spec-mandated lines
+"lyri/export.py" = ["E501"]  # ASS format declarations are single spec-mandated lines
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

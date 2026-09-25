@@ -18,8 +18,8 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
-from lts.pipeline import run, slugify
-from lts.render import render_video
+from lyri.pipeline import run, slugify
+from lyri.render import render_video
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "out"
@@ -91,7 +91,7 @@ def song_info(slug: str) -> dict:
     }
 
 
-app = FastAPI(title="LyricsTimeStamper")
+app = FastAPI(title="Lyri")
 
 
 @app.get("/")
@@ -198,5 +198,5 @@ def serve_app(port: int = 8700) -> None:
     threading.Thread(target=worker, daemon=True).start()
     url = f"http://127.0.0.1:{port}/"
     threading.Timer(1.2, lambda: webbrowser.open(url)).start()
-    print(f"LyricsTimeStamper app at {url}")
+    print(f"Lyri Studio at {url}")
     uvicorn.run(app, host="127.0.0.1", port=port, log_level="warning")

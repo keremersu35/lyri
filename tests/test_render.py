@@ -1,7 +1,7 @@
 import pytest
 
-from lts import render
-from lts.render import HOLD, LEAD, line_at, timeline
+from lyri import render
+from lyri.render import HOLD, LEAD, line_at, timeline
 
 LINES = [
     {"start": 2.0, "end": 3.0, "words": [{"text": "one", "start": 2.0}, {"text": "two", "start": 2.5}]},

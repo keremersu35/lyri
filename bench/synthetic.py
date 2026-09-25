@@ -17,8 +17,8 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from lts.audio import load_audio  # noqa: E402
-from lts.pipeline import run  # noqa: E402
+from lyri.audio import load_audio  # noqa: E402
+from lyri.pipeline import run  # noqa: E402
 
 SR = 44100
 TEXT = """i walked along the river where the water rests

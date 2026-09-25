@@ -1,4 +1,4 @@
-from lts.lyrics import clean_line, match_score, parse_lrc, parse_plain
+from lyri.lyrics import clean_line, match_score, parse_lrc, parse_plain
 
 LRC = """[ar:Nobody]
 [ti:Test Tune]

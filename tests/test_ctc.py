@@ -1,6 +1,6 @@
 import numpy as np
 
-from lts.ctc import normalize_word, token_frames, viterbi
+from lyri.ctc import normalize_word, token_frames, viterbi
 
 
 def test_normalize_word():

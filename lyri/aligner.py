@@ -7,12 +7,12 @@ import torch
 from transformers import AutoModelForCTC, AutoProcessor
 from transformers.utils import logging as hf_logging
 
-from lts.audio import FPS, HOP, SR
-from lts.ctc import token_frames, viterbi
+from lyri.audio import FPS, HOP, SR
+from lyri.ctc import token_frames, viterbi
 
 # w2v-BERT 2.0 fine-tuned on song lyrics (MIT). On JamendoLyrics it halved the >1 s errors of the
 # LibriSpeech wav2vec2 model, and works on the full mix. Its Hugging Face repo has since been
-# taken down, so it loads from the local cache when present; set LTS_ALIGN_MODEL to a mirror or a
+# taken down, so it loads from the local cache when present; set LYRI_ALIGN_MODEL to a mirror or a
 # local folder to use it elsewhere.
 SINGING_MODEL = "mrfakename/w2v-bert-2.0-music-lyrics-ctc"
 # English speech model (Apache-2.0), always downloadable. Works on the separated vocals.
@@ -44,7 +44,7 @@ class Aligner:
         self.device = device or ("mps" if torch.backends.mps.is_available() else "cpu")
         self.dtype = torch.float16 if fp16 and self.device != "cpu" else torch.float32
         hf_logging.set_verbosity_error()
-        override = os.environ.get("LTS_ALIGN_MODEL")
+        override = os.environ.get("LYRI_ALIGN_MODEL")
         for model_id in [override] if override else [SINGING_MODEL, SPEECH_MODEL]:
             if loaded := _load(model_id):
                 break

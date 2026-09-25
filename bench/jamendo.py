@@ -23,8 +23,8 @@ import numpy as np
 from huggingface_hub import hf_hub_download
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from lts.audio import load_audio  # noqa: E402
-from lts.pipeline import run, slugify  # noqa: E402
+from lyri.audio import load_audio  # noqa: E402
+from lyri.pipeline import run, slugify  # noqa: E402
 
 REPO = "jamendolyrics/jamendolyrics"
 DATA = Path(__file__).resolve().parent / "data"

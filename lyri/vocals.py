@@ -2,7 +2,7 @@
 
 import numpy as np
 
-from lts.audio import FPS, SR, frame_rms, to_db
+from lyri.audio import FPS, SR, frame_rms, to_db
 
 
 def vocal_activity(vocals: np.ndarray, instrumental: np.ndarray) -> float:

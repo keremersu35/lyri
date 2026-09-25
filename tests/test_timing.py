@@ -1,7 +1,7 @@
 import numpy as np
 
-from lts.audio import FPS
-from lts.timing import clamp_ends, enforce_order, extend_ends, fill_gaps
+from lyri.audio import FPS
+from lyri.timing import clamp_ends, enforce_order, extend_ends, fill_gaps
 
 
 def w(start, end=None):

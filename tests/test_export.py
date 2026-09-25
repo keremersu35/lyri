@@ -1,6 +1,6 @@
 import json
 
-from lts.export import _ass_ts, _lrc_ts, _srt_ts, write_all
+from lyri.export import _ass_ts, _lrc_ts, _srt_ts, write_all
 
 DOC = {
     "meta": {"artist": "Nobody", "title": "Test Tune"},

@@ -1,4 +1,4 @@
-// Lyri Studio — talks to the local API in lts/server.py (no build step).
+// Lyri Studio — talks to the local API in lyri/server.py (no build step).
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));

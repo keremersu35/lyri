@@ -72,7 +72,7 @@ def font(size: int) -> ImageFont.FreeTypeFont:
     for path in FONT_PATHS:
         if Path(path).exists():
             return ImageFont.truetype(path, size)
-    raise FileNotFoundError("no Arial/Arial Narrow-like font found; add one to lts.render.FONT_PATHS")
+    raise FileNotFoundError("no Arial/Arial Narrow-like font found; add one to lyri.render.FONT_PATHS")
 
 
 def text_width(word: str, size: int) -> float:

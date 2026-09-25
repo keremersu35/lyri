@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LyricsTimeStamper</title>
+<title>Lyri</title>
 <meta name="description" content="Word-level timestamped lyrics for any song, plus Brat-style lyric videos. Runs locally on Apple Silicon.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -49,7 +49,7 @@
       <h1 class="brat">lyrics that land on every word</h1>
       <p>Give it a song, get word-level timestamped lyrics (JSON, LRC, SRT, ASS) and a Brat-style lyric video — all computed on your own Mac.</p>
       <a class="btn" href="demo/">▶ Try the demo</a>
-      <a class="btn alt" href="https://github.com/">★ Source on GitHub</a>
+      <a class="btn alt" href="https://github.com/keremersu35/lyri">★ Source on GitHub</a>
     </div>
     <svg class="mascot" viewBox="0 0 120 130" aria-hidden="true">
       <ellipse cx="60" cy="122" rx="34" ry="6" fill="rgba(0,0,0,.12)"/>
@@ -81,7 +81,7 @@
     <h2>Measured, not guessed</h2>
     <p class="muted">Word onsets vs. hand annotations on English <a href="https://huggingface.co/datasets/jamendolyrics/jamendolyrics">JamendoLyrics</a> songs, lyrics given. Reproduce with <code>bench/jamendo.py</code>.</p>
     <table>
-      <tr><th></th><th>Speech model (start)</th><th>LyricsTimeStamper</th></tr>
+      <tr><th></th><th>Speech model (start)</th><th>Lyri</th></tr>
       <tr><td>Mean onset error</td><td>0.226 s</td><td><b>0.088 s</b></td></tr>
       <tr><td>Words within 0.3 s</td><td>90.4 %</td><td><b>97.7 %</b></td></tr>
       <tr><td>Words off by more than 1 s</td><td>50</td><td><b>13</b></td></tr>
@@ -94,8 +94,8 @@
     <h2>Run it</h2>
     <p class="muted">Needs an Apple Silicon Mac, <code>ffmpeg</code> and <code>uv</code>. The heavy lifting runs locally; nothing is uploaded anywhere.</p>
 <pre>brew install ffmpeg uv
-git clone https://github.com/&lt;you&gt;/LyricsTimeStamper && cd LyricsTimeStamper
-uv run lts app          # web app at http://127.0.0.1:8700</pre>
+git clone https://github.com/keremersu35/lyri && cd lyri
+uv run lyri app          # web app at http://127.0.0.1:8700</pre>
   </div>
 </section>
 

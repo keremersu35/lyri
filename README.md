@@ -1,11 +1,11 @@
-# LyricsTimeStamper
+# Lyri
 
 Word-level timestamped lyrics for any song, plus Brat-style lyric videos — computed locally on an Apple Silicon Mac.
 
 Give it an MP3 and it returns every word's start and end time as JSON, enhanced LRC, SRT and ASS karaoke,
 a browser player, and a vertical (or square, or iPod classic) MP4.
 
-**[Live demo →](https://github.com/)** *(GitHub Pages; update this link after the first deploy)*
+**[Live demo →](https://keremersu35.github.io/lyri/)**
 
 ## Quick start
 
@@ -13,8 +13,8 @@ Requirements: Apple Silicon Mac (M1 or newer), [`uv`](https://docs.astral.sh/uv/
 
 ```bash
 brew install uv ffmpeg
-git clone https://github.com/<you>/LyricsTimeStamper && cd LyricsTimeStamper
-uv run lts app            # opens the web app at http://127.0.0.1:8700
+git clone https://github.com/keremersu35/lyri && cd lyri
+uv run lyri app            # opens the web app at http://127.0.0.1:8700
 ```
 
 The first run downloads the models (a few GB) into the Hugging Face cache.
@@ -22,12 +22,12 @@ The first run downloads the models (a few GB) into the Hugging Face cache.
 ### Command line
 
 ```bash
-uv run lts process "Artist - Title.mp3"                 # -> out/<song>/lyrics.json (+ .lrc .srt .ass, player)
-uv run lts process song.mp3 --lyrics lyrics.txt          # use your own lyrics (.txt or .lrc)
-uv run lts serve out/<song>                              # Brat player in the browser
-uv run lts video out/<song>                              # 1080x1920 MP4
-uv run lts video out/<song> --size 1080x1080 --mode highlight --bg "#ffffff" --offset 80
-uv run lts video out/<song> --ipod                       # iPod classic: 320x240 H.264 Baseline .m4v
+uv run lyri process "Artist - Title.mp3"                 # -> out/<song>/lyrics.json (+ .lrc .srt .ass, player)
+uv run lyri process song.mp3 --lyrics lyrics.txt          # use your own lyrics (.txt or .lrc)
+uv run lyri serve out/<song>                              # Brat player in the browser
+uv run lyri video out/<song>                              # 1080x1920 MP4
+uv run lyri video out/<song> --size 1080x1080 --mode highlight --bg "#ffffff" --offset 80
+uv run lyri video out/<song> --ipod                       # iPod classic: 320x240 H.264 Baseline .m4v
 ```
 
 `process` options: `--artist/--title` when tags and file name don't say, `--no-separate` for a cappella input.
@@ -87,12 +87,12 @@ placed at exactly known times.
 ## Project layout
 
 ```
-lts/            the Python package
+lyri/           the Python package
   pipeline.py     orchestration: stems -> text -> alignment -> exports
   separate.py     Demucs             transcribe.py   Whisper (MLX)       lyrics.py   LRCLIB, parsing, validation
   aligner.py      CTC model          ctc.py          Viterbi, text norm  lines.py    line-level strategies
   vocals.py       vocal activity     timing.py       word-timing fixes   export.py   JSON/LRC/SRT/ASS
-  render.py       video renderer     server.py       web app API         cli.py      `lts` command
+  render.py       video renderer     server.py       web app API         cli.py      `lyri` command
 web/app/        the web app (plain HTML/CSS/JS, no build step)
 web/player.html the Brat player (copied next to every processed song)
 site/           GitHub Pages: landing page and demo (built by scripts/build_site.sh)
@@ -109,7 +109,7 @@ Development: `uv run pytest`, `uv run ruff check .`, `uv run ruff format .`.
   [`mrfakename/w2v-bert-2.0-music-lyrics-ctc`](https://huggingface.co/mrfakename/w2v-bert-2.0-music-lyrics-ctc)
   (MIT), has been removed from Hugging Face. If it is in your local cache it is used; otherwise the pipeline
   falls back to `facebook/wav2vec2-large-960h-lv60-self` on the vocal stem (the "first version" column above).
-  Point `LTS_ALIGN_MODEL` at a mirror or local folder to use the singing model.
+  Point `LYRI_ALIGN_MODEL` at a mirror or local folder to use the singing model.
 - Video text uses Arial Narrow from macOS; it is not bundled.
 
 ## Credits and licenses

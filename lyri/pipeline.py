@@ -10,11 +10,11 @@ from pathlib import Path
 
 import numpy as np
 
-from lts import export
-from lts.aligner import Aligner
-from lts.audio import HOP, load_audio, probe_duration
-from lts.ctc import normalize_word
-from lts.lines import (
+from lyri import export
+from lyri.aligner import Aligner
+from lyri.audio import HOP, load_audio, probe_duration
+from lyri.ctc import normalize_word
+from lyri.lines import (
     add_missing_passages,
     align_global,
     align_windowed,
@@ -22,11 +22,11 @@ from lts.lines import (
     repair_with_synced,
     transcript_lyrics,
 )
-from lts.lyrics import find_lyrics, load_lyrics_file
-from lts.separate import separate_vocals
-from lts.timing import clamp_ends, enforce_order, extend_ends, fill_gaps
-from lts.transcribe import transcribe
-from lts.vocals import apply_vocal_mask, vocal_activity, vocal_envelope, vocal_mask
+from lyri.lyrics import find_lyrics, load_lyrics_file
+from lyri.separate import separate_vocals
+from lyri.timing import clamp_ends, enforce_order, extend_ends, fill_gaps
+from lyri.transcribe import transcribe
+from lyri.vocals import apply_vocal_mask, vocal_activity, vocal_envelope, vocal_mask
 
 PLAYER = Path(__file__).resolve().parent.parent / "web" / "player.html"
 NO_TRANSCRIPT = {"language": "en", "model": None, "segments": []}

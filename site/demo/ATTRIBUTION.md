@@ -5,4 +5,4 @@
 Licensed under Creative Commons Attribution (CC BY) as listed on Jamendo and in the
 [JamendoLyrics](https://huggingface.co/datasets/jamendolyrics/jamendolyrics) dataset,
 which also provided the lyrics text. `lyrics.json` is the word-level timing produced by
-LyricsTimeStamper from that audio and text.
+Lyri from that audio and text.
