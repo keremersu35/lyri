@@ -43,28 +43,70 @@
   <button id="theme" title="t">green</button>
   <span id="offset" title="[ and ] nudge sync">sync +0ms</span>
 </div>
-<audio id="audio" preload="auto"></audio>
 <script>
 const $ = (id) => document.getElementById(id);
-const audio = $("audio"), lineEl = $("line"), measure = $("measure");
+const lineEl = $("line"), measure = $("measure");
 let doc = null, lineIdx = -1, wordEls = [];
-let offset = 0;
-// Bluetooth headphones play audio 100-250 ms after audio.currentTime says; the Web Audio
-// clock knows the device's output latency, so route playback through it and subtract that.
-let outputLatency = 0, audioCtx = null;
-function initLatency() {
-  if (audioCtx) return;
-  try {
-    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    audioCtx.createMediaElementSource(audio).connect(audioCtx.destination);
-    const read = () => {
-      outputLatency = audioCtx.outputLatency || audioCtx.baseLatency || 0;
-      nudge(0);
-    };
-    read(); setInterval(read, 2000);  // changes when headphones connect/disconnect
-  } catch {}
-}
+let offset = 0;  // user sync nudge in ms, positive = lyrics later
 try { offset = +localStorage.getItem("brat-offset") || 0; } catch {}
+
+// ---- audio clock -----------------------------------------------------------
+// The song is decoded and played through Web Audio, and the position is read from
+// getOutputTimestamp(): the sample the speakers are playing right now, with every
+// buffer and device delay (Bluetooth included) accounted for. <audio>.currentTime is
+// not good enough for word-level sync: Chrome runs it ahead of what you actually hear.
+const player = {
+  ctx: null, buffer: null, src: null, startAt: 0, pausedAt: 0, playing: false,
+  async load(url) {
+    this.stop();
+    this.buffer = null; this.pausedAt = 0;
+    this.ctx ||= new (window.AudioContext || window.webkitAudioContext)();
+    $("play").textContent = "loading…";
+    const data = await (await fetch(url)).arrayBuffer();
+    this.buffer = await this.ctx.decodeAudioData(data);
+    setPlaying(false);
+  },
+  get duration() { return this.buffer ? this.buffer.duration : 0; },
+  position() {
+    if (!this.playing) return this.pausedAt;
+    const ctx = this.ctx;
+    let heard = ctx.currentTime - (ctx.outputLatency || ctx.baseLatency || 0);
+    const ts = ctx.getOutputTimestamp && ctx.getOutputTimestamp();
+    if (ts && ts.contextTime > 0 && ts.performanceTime > 0) {
+      heard = ts.contextTime + (performance.now() - ts.performanceTime) / 1000;
+    }
+    return Math.min(Math.max(0, heard - this.startAt), this.duration);
+  },
+  play() {
+    if (!this.buffer || this.playing) return;
+    if (this.pausedAt >= this.duration - 0.05) this.pausedAt = 0;
+    this.ctx.resume();
+    const src = this.ctx.createBufferSource();
+    src.buffer = this.buffer;
+    src.connect(this.ctx.destination);
+    src.onended = () => { if (this.src === src) { this.src = null; this.playing = false; this.pausedAt = this.duration; setPlaying(false); } };
+    src.start(0, this.pausedAt);
+    this.startAt = this.ctx.currentTime - this.pausedAt;
+    this.src = src; this.playing = true;
+    setPlaying(true);
+  },
+  pause() {
+    if (!this.playing) return;
+    this.pausedAt = this.position();
+    this.stop();
+    setPlaying(false);
+  },
+  stop() {
+    if (this.src) { this.src.onended = null; try { this.src.stop(); } catch {} this.src = null; }
+    this.playing = false;
+  },
+  seek(t) {
+    const was = this.playing;
+    this.stop();
+    this.pausedAt = Math.min(Math.max(0, t), this.duration);
+    if (was) this.play();
+  },
+};
 
 // ---- loading -------------------------------------------------------------
 async function loadFromServer() {
@@ -77,7 +119,7 @@ async function loadFromServer() {
 }
 function setDoc(d, audioUrl) {
   doc = d; lineIdx = -1;
-  audio.src = audioUrl;
+  player.load(audioUrl).catch(() => { $("play").textContent = "can't load audio"; });
   document.title = `${d.meta.title || "brat lyrics"}`;
   document.body.classList.remove("empty");
   if (d.meta.instrumental) showText("instrumental");
@@ -143,7 +185,7 @@ function currentLine(t) {
 }
 function tick() {
   if (doc && !doc.meta.instrumental) {
-    const t = audio.currentTime - outputLatency - offset / 1000;
+    const t = player.position() - offset / 1000;
     const i = currentLine(t);
     if (i !== lineIdx) showLine(i);
     if (i >= 0) {
@@ -154,27 +196,25 @@ function tick() {
       });
     }
   }
-  const d = audio.duration || 0;
-  $("fill").style.width = d ? (audio.currentTime / d) * 100 + "%" : 0;
-  $("time").textContent = `${fmt(audio.currentTime)} / ${fmt(d)}`;
+  const d = player.duration, pos = player.position();
+  $("fill").style.width = d ? (pos / d) * 100 + "%" : 0;
+  $("time").textContent = `${fmt(pos)} / ${fmt(d)}`;
   requestAnimationFrame(tick);
 }
 const fmt = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
 requestAnimationFrame(tick);
 
 // ---- controls -------------------------------------------------------------
-const toggle = () => {
-  initLatency();
-  if (audioCtx && audioCtx.state === "suspended") audioCtx.resume();
-  return audio.paused ? audio.play() : audio.pause();
-};
-audio.addEventListener("play", () => { document.body.classList.remove("paused"); $("play").textContent = "pause"; });
-audio.addEventListener("pause", () => { document.body.classList.add("paused"); $("play").textContent = "play"; });
+const toggle = () => (player.playing ? player.pause() : player.play());
+function setPlaying(on) {
+  document.body.classList.toggle("paused", !on);
+  $("play").textContent = on ? "pause" : "play";
+}
 $("play").onclick = toggle;
 $("stage").onclick = toggle;
 $("bar").onclick = (e) => {
   const r = e.currentTarget.getBoundingClientRect();
-  audio.currentTime = ((e.clientX - r.left) / r.width) * (audio.duration || 0);
+  player.seek(((e.clientX - r.left) / r.width) * player.duration);
 };
 function setMode() {
   lineEl.classList.toggle("reveal"); lineEl.classList.toggle("highlight");
@@ -187,16 +227,15 @@ function setTheme() {
 function nudge(ms) {
   offset += ms;
   try { localStorage.setItem("brat-offset", offset); } catch {}
-  const bt = Math.round(outputLatency * 1000);
-  $("offset").textContent = `sync ${offset >= 0 ? "+" : ""}${offset}ms` + (bt > 20 ? ` · output ${bt}ms` : "");
+  $("offset").textContent = `sync ${offset >= 0 ? "+" : ""}${offset}ms`;
 }
 $("mode").onclick = setMode;
 $("theme").onclick = setTheme;
 nudge(0);
 addEventListener("keydown", (e) => {
   if (e.code === "Space") { e.preventDefault(); toggle(); }
-  else if (e.key === "ArrowRight") audio.currentTime += 5;
-  else if (e.key === "ArrowLeft") audio.currentTime -= 5;
+  else if (e.key === "ArrowRight") player.seek(player.position() + 5);
+  else if (e.key === "ArrowLeft") player.seek(player.position() - 5);
   else if (e.key === "m") setMode();
   else if (e.key === "t") setTheme();
   else if (e.key === "]") nudge(25);
