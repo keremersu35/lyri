@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>brat lyrics</title>
+<style>
+  :root { --bg: #8ace00; --fg: #000; --dim: rgba(0,0,0,.18); }
+  body.white { --bg: #fff; --fg: #000; --dim: rgba(0,0,0,.14); }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg); overflow: hidden;
+    font-family: "Arial Narrow", Arial, sans-serif; transition: background .4s; }
+  #stage { position: fixed; inset: 0; display: grid; place-items: center; padding: 6vmin; }
+  #line { width: 100%; text-align: center; line-height: .92; letter-spacing: -.02em;
+    text-transform: lowercase; word-spacing: .05em; }
+  #line .w { display: inline-block; white-space: pre; transition: opacity .06s linear; }
+  #line.reveal .w.future { display: none; }
+  #line.highlight .w.future { color: var(--dim); }
+  #line .w.active { opacity: 1; }
+  #measure { position: absolute; visibility: hidden; left: 0; top: 0; }
+  #hud { position: fixed; left: 0; right: 0; bottom: 0; padding: 14px 18px; display: flex; gap: 12px;
+    align-items: center; font: 13px/1 Arial, sans-serif; background: linear-gradient(transparent, rgba(0,0,0,.12));
+    opacity: 0; transition: opacity .3s; }
+  body:hover #hud, body.paused #hud { opacity: 1; }
+  #hud button { font: inherit; background: var(--fg); color: var(--bg); border: 0; padding: 7px 12px; cursor: pointer; }
+  #bar { flex: 1; height: 6px; background: rgba(0,0,0,.2); cursor: pointer; position: relative; }
+  #fill { position: absolute; inset: 0 auto 0 0; background: var(--fg); width: 0; }
+  #time, #offset { min-width: 88px; text-align: right; font-variant-numeric: tabular-nums; }
+  #drop { position: fixed; inset: 0; display: none; place-items: center; font-size: 5vmin; background: var(--bg);
+    text-transform: lowercase; text-align: center; padding: 8vmin; }
+  body.empty #drop { display: grid; }
+</style>
+</head>
+<body class="paused">
+<div id="stage"><div id="line" class="reveal"></div></div>
+<div id="measure"></div>
+<div id="drop">drop a song + its lyrics.json here<br>or run: uv run lts serve out/&lt;song&gt;</div>
+<div id="hud">
+  <button id="play">play</button>
+  <div id="bar"><div id="fill"></div></div>
+  <span id="time">0:00</span>
+  <button id="mode" title="m">reveal</button>
+  <button id="theme" title="t">green</button>
+  <span id="offset" title="[ and ] nudge sync">sync +0ms</span>
+</div>
+<audio id="audio" preload="auto"></audio>
+<script>
+const $ = (id) => document.getElementById(id);
+const audio = $("audio"), lineEl = $("line"), measure = $("measure");
+let doc = null, lineIdx = -1, wordEls = [];
+let offset = 0;
+// Bluetooth headphones play audio 100-250 ms after audio.currentTime says; the Web Audio
+// clock knows the device's output latency, so route playback through it and subtract that.
+let outputLatency = 0, audioCtx = null;
+function initLatency() {
+  if (audioCtx) return;
+  try {
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    audioCtx.createMediaElementSource(audio).connect(audioCtx.destination);
+    const read = () => {
+      outputLatency = audioCtx.outputLatency || audioCtx.baseLatency || 0;
+      nudge(0);
+    };
+    read(); setInterval(read, 2000);  // changes when headphones connect/disconnect
+  } catch {}
+}
+try { offset = +localStorage.getItem("brat-offset") || 0; } catch {}
+
+// ---- loading -------------------------------------------------------------
+async function loadFromServer() {
+  try {
+    const res = await fetch("lyrics.json");
+    if (!res.ok) throw 0;
+    const d = await res.json();
+    setDoc(d, d.meta.audio);
+  } catch { document.body.classList.add("empty"); }
+}
+function setDoc(d, audioUrl) {
+  doc = d; lineIdx = -1;
+  audio.src = audioUrl;
+  document.title = `${d.meta.title || "brat lyrics"}`;
+  document.body.classList.remove("empty");
+  if (d.meta.instrumental) showText("instrumental");
+}
+document.addEventListener("dragover", (e) => e.preventDefault());
+document.addEventListener("drop", async (e) => {
+  e.preventDefault();
+  const files = [...e.dataTransfer.files];
+  const json = files.find((f) => f.name.endsWith(".json"));
+  const song = files.find((f) => f.type.startsWith("audio/"));
+  if (json && song) setDoc(JSON.parse(await json.text()), URL.createObjectURL(song));
+});
+
+// ---- layout: brat text fills the frame -----------------------------------
+function fit(words) {
+  const stage = $("stage").getBoundingClientRect();
+  const maxW = stage.width * 0.88, maxH = stage.height * 0.8;
+  measure.style.width = maxW + "px";
+  measure.className = lineEl.className;
+  measure.style.lineHeight = ".92";
+  measure.style.textAlign = "center";
+  measure.style.textTransform = "lowercase";
+  measure.innerHTML = words.map((w) => `<span style="display:inline-block;white-space:pre">${esc(w)} </span>`).join("");
+  let lo = 8, hi = Math.min(stage.height * 0.6, 520);
+  for (let i = 0; i < 18; i++) {
+    const mid = (lo + hi) / 2;
+    measure.style.fontSize = mid + "px";
+    const tooWide = [...measure.children].some((c) => c.offsetWidth > maxW);
+    (measure.scrollHeight > maxH || tooWide) ? (hi = mid) : (lo = mid);
+  }
+  return lo;
+}
+const esc = (s) => s.replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+function applyFont(size) {
+  lineEl.style.fontSize = size + "px";
+  lineEl.style.filter = `blur(${Math.max(0.4, size * 0.011).toFixed(2)}px)`;
+}
+function showLine(i) {
+  lineIdx = i;
+  if (i < 0) { lineEl.innerHTML = ""; wordEls = []; return; }
+  const words = doc.lines[i].words.map((w) => w.text);
+  lineEl.innerHTML = words.map((w) => `<span class="w future">${esc(w)} </span>`).join("");
+  wordEls = [...lineEl.children];
+  applyFont(fit(words));
+}
+function showText(text) {
+  lineIdx = -2;
+  lineEl.innerHTML = `<span class="w">${esc(text)}</span>`;
+  applyFont(fit([text]));
+}
+addEventListener("resize", () => { const i = lineIdx; lineIdx = -3; if (doc && i >= 0) showLine(i); });
+
+// ---- sync loop -------------------------------------------------------------
+function currentLine(t) {
+  const lines = doc.lines;
+  let i = -1;
+  for (let k = 0; k < lines.length; k++) { if (lines[k].start - 0.15 <= t) i = k; else break; }
+  if (i < 0) return -1;
+  const next = lines[i + 1];
+  // During long instrumental breaks, clear the screen.
+  const holdUntil = next ? Math.min(next.start - 0.15, lines[i].end + 2.5) : lines[i].end + 2.5;
+  return t <= holdUntil ? i : -1;
+}
+function tick() {
+  if (doc && !doc.meta.instrumental) {
+    const t = audio.currentTime - outputLatency - offset / 1000;
+    const i = currentLine(t);
+    if (i !== lineIdx) showLine(i);
+    if (i >= 0) {
+      doc.lines[i].words.forEach((w, k) => {
+        const el = wordEls[k];
+        el.classList.toggle("future", w.start > t);
+        el.classList.toggle("active", w.start <= t && t < w.end);
+      });
+    }
+  }
+  const d = audio.duration || 0;
+  $("fill").style.width = d ? (audio.currentTime / d) * 100 + "%" : 0;
+  $("time").textContent = `${fmt(audio.currentTime)} / ${fmt(d)}`;
+  requestAnimationFrame(tick);
+}
+const fmt = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
+requestAnimationFrame(tick);
+
+// ---- controls -------------------------------------------------------------
+const toggle = () => {
+  initLatency();
+  if (audioCtx && audioCtx.state === "suspended") audioCtx.resume();
+  return audio.paused ? audio.play() : audio.pause();
+};
+audio.addEventListener("play", () => { document.body.classList.remove("paused"); $("play").textContent = "pause"; });
+audio.addEventListener("pause", () => { document.body.classList.add("paused"); $("play").textContent = "play"; });
+$("play").onclick = toggle;
+$("stage").onclick = toggle;
+$("bar").onclick = (e) => {
+  const r = e.currentTarget.getBoundingClientRect();
+  audio.currentTime = ((e.clientX - r.left) / r.width) * (audio.duration || 0);
+};
+function setMode() {
+  lineEl.classList.toggle("reveal"); lineEl.classList.toggle("highlight");
+  $("mode").textContent = lineEl.classList.contains("reveal") ? "reveal" : "highlight";
+}
+function setTheme() {
+  document.body.classList.toggle("white");
+  $("theme").textContent = document.body.classList.contains("white") ? "white" : "green";
+}
+function nudge(ms) {
+  offset += ms;
+  try { localStorage.setItem("brat-offset", offset); } catch {}
+  const bt = Math.round(outputLatency * 1000);
+  $("offset").textContent = `sync ${offset >= 0 ? "+" : ""}${offset}ms` + (bt > 20 ? ` · output ${bt}ms` : "");
+}
+$("mode").onclick = setMode;
+$("theme").onclick = setTheme;
+nudge(0);
+addEventListener("keydown", (e) => {
+  if (e.code === "Space") { e.preventDefault(); toggle(); }
+  else if (e.key === "ArrowRight") audio.currentTime += 5;
+  else if (e.key === "ArrowLeft") audio.currentTime -= 5;
+  else if (e.key === "m") setMode();
+  else if (e.key === "t") setTheme();
+  else if (e.key === "]") nudge(25);
+  else if (e.key === "[") nudge(-25);
+});
+loadFromServer();
+</script>
+</body>
+</html>

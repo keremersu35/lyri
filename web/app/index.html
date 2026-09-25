@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lyri Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/app/app.css">
+</head>
+<body>
+<header>
+  <button class="icon-btn" id="libBtn" aria-label="Library">📚</button>
+  <div class="logo">
+    <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="22" r="15" fill="#8ace00"/><circle cx="15" cy="20" r="3" fill="#fff"/><circle cx="25" cy="20" r="3" fill="#fff"/><circle cx="15.6" cy="20.6" r="1.6" fill="#222"/><circle cx="25.6" cy="20.6" r="1.6" fill="#222"/><path d="M5 20a15 15 0 0 1 30 0" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round"/></svg>
+    lyri<span>studio</span>
+  </div>
+  <div class="spacer"></div>
+  <div class="status-pill hidden" id="statusPill" role="status"><i></i><span id="statusText">Working</span></div>
+</header>
+
+<div class="shell">
+  <!-- ============ library ============ -->
+  <aside class="col sidebar" id="sidebar" aria-label="Library">
+    <button class="btn big" id="newBtn">＋ New song</button>
+    <div class="side-title">Your songs</div>
+    <div id="libList"><div class="lib-empty">Nothing here yet.</div></div>
+  </aside>
+
+  <!-- ============ controls ============ -->
+  <section class="col controls" aria-label="Settings">
+    <div class="controls-body">
+      <div class="tabs" role="tablist">
+        <button class="tab on" id="tabPrep" role="tab" aria-selected="true"><span class="n"><b>1</b></span> Prepare</button>
+        <button class="tab" id="tabVideo" role="tab" aria-selected="false" disabled title="Prepare a song first"><span class="n"><b>2</b></span> Video <span id="lockIcon">🔒</span></button>
+      </div>
+
+      <!-- prepare -->
+      <div id="panePrep">
+        <div class="sec">
+          <h3>🎵 Song</h3>
+          <label class="drop" id="drop">
+            <input type="file" id="fileInput" accept="audio/*,.mp3,.m4a,.wav,.flac,.ogg" hidden>
+            <span class="icon">🎵</span>
+            <b>Drop an MP3 or click</b>
+            <span class="hint">mp3 · m4a · wav · flac</span>
+          </label>
+          <div class="file hidden" id="fileBox">
+            <div class="disc paused" id="disc"></div>
+            <div class="grow"><div class="name" id="fileName"></div><div class="sub" id="fileSub"></div></div>
+            <button class="icon-btn" id="previewBtn" aria-label="Listen">▶︎</button>
+            <button class="icon-btn" id="changeBtn" aria-label="Change">↺</button>
+          </div>
+          <audio id="previewAudio"></audio>
+        </div>
+
+        <div class="sec">
+          <h3>📝 Lyrics <span class="opt">optional</span></h3>
+          <div class="seg" id="lyricsSeg">
+            <button data-v="auto" class="on">🔎 Find online</button>
+            <button data-v="paste">✍️ Paste</button>
+          </div>
+          <div id="autoBox" class="stack">
+            <input type="text" id="artist" placeholder="Artist (defaults to file name)">
+            <input type="text" id="title" placeholder="Title (defaults to file name)">
+            <p class="hint">Can't find them? No worries: I'll listen and write them down myself 👂</p>
+          </div>
+          <div id="pasteBox" class="hidden">
+            <textarea id="lyricsText" placeholder="One line per row…&#10;Write the chorus as many times as it's sung.&#10;I'll clean up headers like [Chorus]."></textarea>
+            <p class="hint" id="lyricsCount">0 lines · with your lyrics I'm faster and more accurate</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- video -->
+      <div id="paneVideo" class="hidden">
+        <div class="sec">
+          <div class="label">Format</div>
+          <div class="tiles" id="formatTiles"></div>
+        </div>
+        <div class="sec">
+          <div class="label">Quality</div>
+          <div class="seg" id="qualitySeg">
+            <button data-v="720">720p · fast</button>
+            <button data-v="1080" class="on">1080p · sharp</button>
+          </div>
+          <div class="seg" id="fpsSeg">
+            <button data-v="30" class="on">30 fps</button>
+            <button data-v="60">60 fps · smooth</button>
+          </div>
+          <p class="hint hidden" id="ipodHint">📟 iPod classic: native 320×240 screen, 30 fps · H.264 Baseline .m4v — add it to the TV app, then sync it to your iPod in Finder.</p>
+        </div>
+        <div class="sec">
+          <div class="label">Colors</div>
+          <div class="swatches" id="swatches"></div>
+          <div class="colors">
+            <label>Background <input type="color" id="bgColor" value="#8ace00"></label>
+            <label>Text <input type="color" id="fgColor" value="#000000"></label>
+          </div>
+        </div>
+        <div class="sec">
+          <div class="label">Style</div>
+          <div class="seg" id="modeSeg">
+            <button data-v="reveal" class="on">✨ Word by word</button>
+            <button data-v="highlight">🖍️ Line + highlight</button>
+          </div>
+          <label class="switch"><input type="checkbox" id="blur" checked><i></i> Brat blur</label>
+        </div>
+        <div class="sec">
+          <div class="label">Sync</div>
+          <div class="range-row">
+            <input type="range" id="offset" min="-300" max="300" step="10" value="0" aria-label="Sync offset">
+            <b id="offsetVal">0 ms</b>
+          </div>
+          <p class="hint">Lyrics showing up before the voice? Slide right to make them appear later. Follows what you set with [ and ] in the player.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls-foot">
+      <button class="btn big" id="startBtn" disabled>Let's go!</button>
+      <button class="btn big pink hidden" id="videoBtn">🎬 Render video</button>
+    </div>
+  </section>
+
+  <!-- ============ stage ============ -->
+  <main class="col stage" aria-live="polite">
+    <div class="hero">
+      <svg class="mascot" id="mascot" viewBox="0 0 120 130" aria-hidden="true">
+        <g class="m-notes" fill="#ff72b6" font-weight="900" font-size="20">
+          <text x="98" y="36">♪</text><text x="4" y="46" fill="#2fb6f5">♫</text>
+        </g>
+        <ellipse cx="60" cy="122" rx="34" ry="6" fill="rgba(0,0,0,.08)"/>
+        <g class="m-body">
+          <path d="M60 20c28 0 44 22 44 52 0 26-18 44-44 44S16 98 16 72c0-30 16-52 44-52z" fill="#8ace00"/>
+          <path d="M28 96c8 12 20 18 32 18 22 0 38-14 42-36-6 18-22 28-42 28-12 0-24-4-32-10z" fill="#76b300"/>
+          <ellipse cx="44" cy="36" rx="10" ry="5" fill="#b4ec4a" transform="rotate(-25 44 36)"/>
+          <path d="M18 62C18 30 38 14 60 14s42 16 42 48" fill="none" stroke="#3b3b3b" stroke-width="7" stroke-linecap="round"/>
+          <rect x="8" y="54" width="16" height="26" rx="8" fill="#ff72b6"/><rect x="96" y="54" width="16" height="26" rx="8" fill="#ff72b6"/>
+          <g class="m-eyes">
+            <g class="m-eye"><ellipse cx="46" cy="64" rx="10" ry="12" fill="#fff"/><circle cx="48" cy="67" r="6" fill="#222"/><circle cx="50" cy="64" r="2.2" fill="#fff"/></g>
+            <g class="m-eye"><ellipse cx="74" cy="64" rx="10" ry="12" fill="#fff"/><circle cx="76" cy="67" r="6" fill="#222"/><circle cx="78" cy="64" r="2.2" fill="#fff"/></g>
+          </g>
+          <g class="m-happy" fill="none" stroke="#222" stroke-width="4" stroke-linecap="round">
+            <path d="M37 66q9-10 18 0"/><path d="M65 66q9-10 18 0"/>
+          </g>
+          <circle cx="34" cy="80" r="6" fill="#ff9fcb" opacity=".8"/><circle cx="86" cy="80" r="6" fill="#ff9fcb" opacity=".8"/>
+          <path class="m-mouth" d="M52 82q8 8 16 0" fill="none" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+          <path class="m-tear" d="M37 76q-4 7 0 10q4-3 0-10z" fill="#2fb6f5"/>
+        </g>
+      </svg>
+      <div class="bubble" id="bubble">Hi! I'm Lyri 🎧 Give me a song and I'll time its lyrics word by word.</div>
+    </div>
+
+    <!-- home -->
+    <section class="view" id="viewHome">
+      <div class="home" id="homeDrop">
+        <div>
+          <span class="big">🎧</span>
+          <h2>Drop your song here</h2>
+          <p>or click to choose — I'll handle the rest</p>
+          <button class="btn sky" id="homePick">Choose file</button>
+          <div class="how">
+            <div><span>🎤</span>I pull the vocals out of the mix</div>
+            <div><span>🎯</span>I place every word to the millisecond</div>
+            <div><span>🎬</span>I turn it into a Brat-style video</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- progress -->
+    <section class="view hidden" id="viewProgress">
+      <div class="panel">
+        <div class="path">
+          <div class="node" data-s="separate"><div class="dot">🎤</div>Split vocals</div>
+          <div class="node" data-s="transcribe"><div class="dot">👂</div>Listen</div>
+          <div class="node" data-s="lyrics"><div class="dot">📝</div>Find lyrics</div>
+          <div class="node" data-s="align"><div class="dot">🎯</div>Align</div>
+        </div>
+        <div class="pbar"><i id="pfill"></i></div>
+        <div class="ptext"><span id="ptip">In the queue…</span><span class="pct" id="ppct">0%</span></div>
+        <details><summary>Technical log</summary><pre class="log" id="plog"></pre></details>
+      </div>
+    </section>
+
+    <!-- result -->
+    <section class="view hidden" id="viewResult">
+      <div class="result-head">
+        <h2 id="resTitle">Ready!</h2>
+        <button class="btn pink small" id="toVideoBtn">🎬 Make a video →</button>
+      </div>
+      <div class="note hidden" id="resNote"></div>
+      <div class="stats" id="stats"></div>
+      <iframe class="player" id="playerFrame" title="Brat player"></iframe>
+      <div class="dl">
+        <span class="hint" style="margin:0 6px 0 0">Click the player to play · <b>m</b> mode · <b>t</b> theme · <b>[ ]</b> sync</span>
+        <span class="spacer"></span>
+        <span id="downloads" class="dl" style="margin:0"></span>
+      </div>
+    </section>
+
+    <!-- video -->
+    <section class="view hidden" id="viewVideo">
+      <div class="video-view" id="videoView">
+        <div class="pane">
+          <div class="cap">Live preview · <span id="previewCap">1080 × 1920</span></div>
+          <div class="preview-box" id="previewBox"><div class="preview" id="preview"><div class="txt" id="previewTxt"></div></div></div>
+        </div>
+        <div class="pane hidden" id="outPane">
+          <div class="cap">Latest video</div>
+          <video class="out" id="outVideo" controls></video>
+          <div class="dl" id="outLinks"></div>
+        </div>
+      </div>
+      <div class="render-box hidden" id="videoProg" style="margin-top:16px">
+        <div class="pbar sky"><i id="vfill"></i></div>
+        <div class="ptext"><span id="vtip">Drawing frames…</span><span class="pct" id="vpct" style="color:var(--sky-d)">0%</span></div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<div class="toast" id="toast" role="alert"></div>
+<canvas id="confetti"></canvas>
+
+<script src="/app/app.js"></script>
+</body>
+</html>

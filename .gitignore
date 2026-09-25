@@ -1,0 +1,26 @@
+# Your songs, lyrics and everything generated from them.
+# Commercial songs and lyrics are copyrighted: never commit them.
+out/
+uploads/
+lyrics/
+bench/data/
+*.mp3
+*.m4a
+*.wav
+*.flac
+*.mp4
+*.m4v
+!site/demo/song.mp3
+
+# Build output
+_site/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# OS
+.DS_Store

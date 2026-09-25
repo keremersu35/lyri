@@ -1,0 +1,2796 @@
+{
+ "version": 1,
+ "meta": {
+  "file": "song.mp3",
+  "audio": "song.mp3",
+  "duration": 240.562,
+  "title": "Feel (Stripped)",
+  "artist": "Cortéz",
+  "language": "en",
+  "lyrics_source": "user-text",
+  "low_confidence_words": 4,
+  "license": "CC BY (Creative Commons Attribution), via Jamendo",
+  "source_url": "https://www.jamendo.com/track/1481500/feel-stripped"
+ },
+ "lines": [
+  {
+   "start": 19.58,
+   "end": 23.4,
+   "text": "yeah oh",
+   "words": [
+    {
+     "text": "yeah",
+     "start": 19.58,
+     "onset": 19.58,
+     "end": 22.0,
+     "conf": 0.429
+    },
+    {
+     "text": "oh",
+     "start": 22.82,
+     "onset": 22.82,
+     "end": 23.4,
+     "conf": 0.126
+    }
+   ]
+  },
+  {
+   "start": 25.82,
+   "end": 28.98,
+   "text": "please don't stand over here",
+   "words": [
+    {
+     "text": "please",
+     "start": 25.82,
+     "onset": 25.74,
+     "end": 26.76,
+     "conf": 0.847
+    },
+    {
+     "text": "don't",
+     "start": 26.76,
+     "onset": 26.72,
+     "end": 27.44,
+     "conf": 0.981
+    },
+    {
+     "text": "stand",
+     "start": 27.44,
+     "onset": 27.34,
+     "end": 27.76,
+     "conf": 0.992
+    },
+    {
+     "text": "over",
+     "start": 27.76,
+     "onset": 27.76,
+     "end": 28.18,
+     "conf": 0.971
+    },
+    {
+     "text": "here",
+     "start": 28.4,
+     "onset": 28.38,
+     "end": 28.98,
+     "conf": 0.913
+    }
+   ]
+  },
+  {
+   "start": 28.98,
+   "end": 32.16,
+   "text": "act like you care so self aware",
+   "words": [
+    {
+     "text": "act",
+     "start": 28.98,
+     "onset": 28.98,
+     "end": 29.3,
+     "conf": 0.992
+    },
+    {
+     "text": "like",
+     "start": 29.3,
+     "onset": 29.28,
+     "end": 29.5,
+     "conf": 0.992
+    },
+    {
+     "text": "you",
+     "start": 29.54,
+     "onset": 29.54,
+     "end": 29.72,
+     "conf": 0.995
+    },
+    {
+     "text": "care",
+     "start": 29.94,
+     "onset": 29.9,
+     "end": 30.58,
+     "conf": 0.992
+    },
+    {
+     "text": "so",
+     "start": 30.62,
+     "onset": 30.58,
+     "end": 30.84,
+     "conf": 0.882
+    },
+    {
+     "text": "self",
+     "start": 30.84,
+     "onset": 30.8,
+     "end": 31.18,
+     "conf": 0.966
+    },
+    {
+     "text": "aware",
+     "start": 31.18,
+     "onset": 31.18,
+     "end": 32.16,
+     "conf": 0.987
+    }
+   ]
+  },
+  {
+   "start": 32.26,
+   "end": 35.38,
+   "text": "i know you were not scared",
+   "words": [
+    {
+     "text": "i",
+     "start": 32.26,
+     "onset": 32.26,
+     "end": 33.08,
+     "conf": 0.994
+    },
+    {
+     "text": "know",
+     "start": 33.08,
+     "onset": 33.04,
+     "end": 33.7,
+     "conf": 0.986
+    },
+    {
+     "text": "you",
+     "start": 33.7,
+     "onset": 33.7,
+     "end": 34.0,
+     "conf": 0.995
+    },
+    {
+     "text": "were",
+     "start": 34.0,
+     "onset": 33.98,
+     "end": 34.26,
+     "conf": 0.906
+    },
+    {
+     "text": "not",
+     "start": 34.26,
+     "onset": 34.24,
+     "end": 34.68,
+     "conf": 0.986
+    },
+    {
+     "text": "scared",
+     "start": 34.68,
+     "onset": 34.52,
+     "end": 35.38,
+     "conf": 0.979
+    }
+   ]
+  },
+  {
+   "start": 35.4,
+   "end": 38.86,
+   "text": "i could've died but that isn't fair huh",
+   "words": [
+    {
+     "text": "i",
+     "start": 35.4,
+     "onset": 35.4,
+     "end": 35.62,
+     "conf": 0.993
+    },
+    {
+     "text": "could've",
+     "start": 35.72,
+     "onset": 35.68,
+     "end": 36.1,
+     "conf": 0.872
+    },
+    {
+     "text": "died",
+     "start": 36.2,
+     "onset": 36.16,
+     "end": 36.78,
+     "conf": 0.992
+    },
+    {
+     "text": "but",
+     "start": 36.78,
+     "onset": 36.76,
+     "end": 36.9,
+     "conf": 0.995
+    },
+    {
+     "text": "that",
+     "start": 37.0,
+     "onset": 36.96,
+     "end": 37.3,
+     "conf": 0.993
+    },
+    {
+     "text": "isn't",
+     "start": 37.3,
+     "onset": 37.3,
+     "end": 37.82,
+     "conf": 0.947
+    },
+    {
+     "text": "fair",
+     "start": 37.82,
+     "onset": 37.78,
+     "end": 38.48,
+     "conf": 0.994
+    },
+    {
+     "text": "huh",
+     "start": 38.48,
+     "onset": 38.46,
+     "end": 38.86,
+     "conf": 0.057
+    }
+   ]
+  },
+  {
+   "start": 39.88,
+   "end": 42.18,
+   "text": "but what am i supposed to think",
+   "words": [
+    {
+     "text": "but",
+     "start": 39.88,
+     "onset": 39.86,
+     "end": 40.08,
+     "conf": 0.995
+    },
+    {
+     "text": "what",
+     "start": 40.12,
+     "onset": 40.08,
+     "end": 40.34,
+     "conf": 0.996
+    },
+    {
+     "text": "am",
+     "start": 40.34,
+     "onset": 40.34,
+     "end": 40.58,
+     "conf": 0.982
+    },
+    {
+     "text": "i",
+     "start": 40.58,
+     "onset": 40.58,
+     "end": 40.86,
+     "conf": 0.993
+    },
+    {
+     "text": "supposed",
+     "start": 40.86,
+     "onset": 40.84,
+     "end": 41.36,
+     "conf": 0.994
+    },
+    {
+     "text": "to",
+     "start": 41.38,
+     "onset": 41.34,
+     "end": 41.6,
+     "conf": 0.995
+    },
+    {
+     "text": "think",
+     "start": 41.68,
+     "onset": 41.62,
+     "end": 42.18,
+     "conf": 0.991
+    }
+   ]
+  },
+  {
+   "start": 42.78,
+   "end": 45.0,
+   "text": "you weren't there for me",
+   "words": [
+    {
+     "text": "you",
+     "start": 42.78,
+     "onset": 42.78,
+     "end": 42.96,
+     "conf": 0.996
+    },
+    {
+     "text": "weren't",
+     "start": 43.02,
+     "onset": 42.98,
+     "end": 43.3,
+     "conf": 0.923
+    },
+    {
+     "text": "there",
+     "start": 43.42,
+     "onset": 43.38,
+     "end": 43.84,
+     "conf": 0.995
+    },
+    {
+     "text": "for",
+     "start": 43.84,
+     "onset": 43.8,
+     "end": 44.46,
+     "conf": 0.994
+    },
+    {
+     "text": "me",
+     "start": 44.46,
+     "onset": 44.44,
+     "end": 45.0,
+     "conf": 0.995
+    }
+   ]
+  },
+  {
+   "start": 46.28,
+   "end": 50.0,
+   "text": "cause i'm not who i should be for you",
+   "words": [
+    {
+     "text": "cause",
+     "start": 46.28,
+     "onset": 46.26,
+     "end": 46.52,
+     "conf": 0.995
+    },
+    {
+     "text": "i'm",
+     "start": 46.54,
+     "onset": 46.54,
+     "end": 46.78,
+     "conf": 0.997
+    },
+    {
+     "text": "not",
+     "start": 46.78,
+     "onset": 46.76,
+     "end": 47.04,
+     "conf": 0.987
+    },
+    {
+     "text": "who",
+     "start": 47.04,
+     "onset": 47.0,
+     "end": 47.44,
+     "conf": 0.963
+    },
+    {
+     "text": "i",
+     "start": 47.44,
+     "onset": 47.44,
+     "end": 48.42,
+     "conf": 0.982
+    },
+    {
+     "text": "should",
+     "start": 48.42,
+     "onset": 48.38,
+     "end": 48.56,
+     "conf": 0.985
+    },
+    {
+     "text": "be",
+     "start": 48.68,
+     "onset": 48.66,
+     "end": 49.18,
+     "conf": 0.986
+    },
+    {
+     "text": "for",
+     "start": 49.4,
+     "onset": 49.36,
+     "end": 49.66,
+     "conf": 0.985
+    },
+    {
+     "text": "you",
+     "start": 49.66,
+     "onset": 49.66,
+     "end": 50.0,
+     "conf": 0.989
+    }
+   ]
+  },
+  {
+   "start": 50.68,
+   "end": 53.9,
+   "text": "you've got a record and a past",
+   "words": [
+    {
+     "text": "you've",
+     "start": 50.68,
+     "onset": 50.68,
+     "end": 50.88,
+     "conf": 0.953
+    },
+    {
+     "text": "got",
+     "start": 51.0,
+     "onset": 50.98,
+     "end": 51.18,
+     "conf": 0.994
+    },
+    {
+     "text": "a",
+     "start": 51.18,
+     "onset": 51.18,
+     "end": 51.42,
+     "conf": 0.983
+    },
+    {
+     "text": "record",
+     "start": 51.42,
+     "onset": 51.4,
+     "end": 52.1,
+     "conf": 0.991
+    },
+    {
+     "text": "and",
+     "start": 52.6,
+     "onset": 52.6,
+     "end": 52.78,
+     "conf": 0.97
+    },
+    {
+     "text": "a",
+     "start": 52.78,
+     "onset": 52.78,
+     "end": 52.9,
+     "conf": 0.906
+    },
+    {
+     "text": "past",
+     "start": 53.1,
+     "onset": 53.04,
+     "end": 53.9,
+     "conf": 0.973
+    }
+   ]
+  },
+  {
+   "start": 54.16,
+   "end": 56.8,
+   "text": "guess that's what makes me the ass",
+   "words": [
+    {
+     "text": "guess",
+     "start": 54.16,
+     "onset": 54.14,
+     "end": 54.34,
+     "conf": 0.987
+    },
+    {
+     "text": "that's",
+     "start": 54.34,
+     "onset": 54.3,
+     "end": 54.52,
+     "conf": 0.591
+    },
+    {
+     "text": "what",
+     "start": 54.56,
+     "onset": 54.52,
+     "end": 55.0,
+     "conf": 0.625
+    },
+    {
+     "text": "makes",
+     "start": 55.0,
+     "onset": 54.98,
+     "end": 55.32,
+     "conf": 0.692
+    },
+    {
+     "text": "me",
+     "start": 55.4,
+     "onset": 55.38,
+     "end": 55.7,
+     "conf": 0.989
+    },
+    {
+     "text": "the",
+     "start": 55.76,
+     "onset": 55.72,
+     "end": 55.9,
+     "conf": 0.85
+    },
+    {
+     "text": "ass",
+     "start": 56.06,
+     "onset": 56.06,
+     "end": 56.8,
+     "conf": 0.147
+    }
+   ]
+  },
+  {
+   "start": 57.16,
+   "end": 60.18,
+   "text": "i should've known i should've cared",
+   "words": [
+    {
+     "text": "i",
+     "start": 57.16,
+     "onset": 57.16,
+     "end": 57.22,
+     "conf": 0.985
+    },
+    {
+     "text": "should've",
+     "start": 57.38,
+     "onset": 57.34,
+     "end": 57.8,
+     "conf": 0.883
+    },
+    {
+     "text": "known",
+     "start": 57.8,
+     "onset": 57.76,
+     "end": 58.54,
+     "conf": 0.961
+    },
+    {
+     "text": "i",
+     "start": 58.74,
+     "onset": 58.74,
+     "end": 58.96,
+     "conf": 0.827
+    },
+    {
+     "text": "should've",
+     "start": 58.96,
+     "onset": 58.92,
+     "end": 59.26,
+     "conf": 0.883
+    },
+    {
+     "text": "cared",
+     "start": 59.5,
+     "onset": 59.46,
+     "end": 60.18,
+     "conf": 0.977
+    }
+   ]
+  },
+  {
+   "start": 60.54,
+   "end": 62.98,
+   "text": "how could i have been so unprepared",
+   "words": [
+    {
+     "text": "how",
+     "start": 60.54,
+     "onset": 60.52,
+     "end": 60.74,
+     "conf": 0.994
+    },
+    {
+     "text": "could",
+     "start": 60.74,
+     "onset": 60.72,
+     "end": 60.94,
+     "conf": 0.995
+    },
+    {
+     "text": "i",
+     "start": 60.98,
+     "onset": 60.98,
+     "end": 61.18,
+     "conf": 0.989
+    },
+    {
+     "text": "have",
+     "start": 61.18,
+     "onset": 61.16,
+     "end": 61.34,
+     "conf": 0.958
+    },
+    {
+     "text": "been",
+     "start": 61.42,
+     "onset": 61.4,
+     "end": 61.74,
+     "conf": 0.994
+    },
+    {
+     "text": "so",
+     "start": 61.74,
+     "onset": 61.72,
+     "end": 61.96,
+     "conf": 0.994
+    },
+    {
+     "text": "unprepared",
+     "start": 61.96,
+     "onset": 61.96,
+     "end": 62.98,
+     "conf": 0.957
+    }
+   ]
+  },
+  {
+   "start": 62.98,
+   "end": 69.82,
+   "text": "now where does the good boy go to hide away hide the pain",
+   "words": [
+    {
+     "text": "now",
+     "start": 62.98,
+     "onset": 62.96,
+     "end": 63.22,
+     "conf": 0.981
+    },
+    {
+     "text": "where",
+     "start": 63.22,
+     "onset": 63.18,
+     "end": 63.5,
+     "conf": 0.739
+    },
+    {
+     "text": "does",
+     "start": 63.54,
+     "onset": 63.5,
+     "end": 63.76,
+     "conf": 0.368
+    },
+    {
+     "text": "the",
+     "start": 63.76,
+     "onset": 63.72,
+     "end": 63.9,
+     "conf": 0.812
+    },
+    {
+     "text": "good",
+     "start": 64.24,
+     "onset": 64.2,
+     "end": 65.0,
+     "conf": 0.891
+    },
+    {
+     "text": "boy",
+     "start": 65.0,
+     "onset": 64.98,
+     "end": 65.86,
+     "conf": 0.982
+    },
+    {
+     "text": "go",
+     "start": 65.86,
+     "onset": 65.82,
+     "end": 66.64,
+     "conf": 0.991
+    },
+    {
+     "text": "to",
+     "start": 66.64,
+     "onset": 66.58,
+     "end": 67.38,
+     "conf": 0.985
+    },
+    {
+     "text": "hide",
+     "start": 67.48,
+     "onset": 67.44,
+     "end": 67.8,
+     "conf": 0.764
+    },
+    {
+     "text": "away",
+     "start": 67.8,
+     "onset": 67.8,
+     "end": 68.64,
+     "conf": 0.898
+    },
+    {
+     "text": "hide",
+     "start": 68.64,
+     "onset": 68.62,
+     "end": 68.94,
+     "conf": 0.822
+    },
+    {
+     "text": "the",
+     "start": 68.96,
+     "onset": 68.92,
+     "end": 69.1,
+     "conf": 0.981
+    },
+    {
+     "text": "pain",
+     "start": 69.24,
+     "onset": 69.2,
+     "end": 69.82,
+     "conf": 0.986
+    }
+   ]
+  },
+  {
+   "start": 70.3,
+   "end": 74.56,
+   "text": "cause you won't see me cry when i'm done",
+   "words": [
+    {
+     "text": "cause",
+     "start": 70.3,
+     "onset": 70.28,
+     "end": 70.5,
+     "conf": 0.946
+    },
+    {
+     "text": "you",
+     "start": 70.5,
+     "onset": 70.5,
+     "end": 70.66,
+     "conf": 0.384
+    },
+    {
+     "text": "won't",
+     "start": 70.66,
+     "onset": 70.64,
+     "end": 70.94,
+     "conf": 0.984
+    },
+    {
+     "text": "see",
+     "start": 70.94,
+     "onset": 70.92,
+     "end": 71.14,
+     "conf": 0.99
+    },
+    {
+     "text": "me",
+     "start": 71.14,
+     "onset": 71.12,
+     "end": 71.38,
+     "conf": 0.992
+    },
+    {
+     "text": "cry",
+     "start": 71.38,
+     "onset": 71.32,
+     "end": 73.12,
+     "conf": 0.985
+    },
+    {
+     "text": "when",
+     "start": 73.14,
+     "onset": 73.1,
+     "end": 73.38,
+     "conf": 0.995
+    },
+    {
+     "text": "i'm",
+     "start": 73.4,
+     "onset": 73.4,
+     "end": 73.86,
+     "conf": 0.972
+    },
+    {
+     "text": "done",
+     "start": 73.86,
+     "onset": 73.82,
+     "end": 74.56,
+     "conf": 0.805
+    }
+   ]
+  },
+  {
+   "start": 76.96,
+   "end": 82.62,
+   "text": "what is it that you want from me want from me",
+   "words": [
+    {
+     "text": "what",
+     "start": 76.96,
+     "onset": 76.92,
+     "end": 77.16,
+     "conf": 0.984
+    },
+    {
+     "text": "is",
+     "start": 77.18,
+     "onset": 77.18,
+     "end": 77.58,
+     "conf": 0.973
+    },
+    {
+     "text": "it",
+     "start": 77.82,
+     "onset": 77.82,
+     "end": 78.32,
+     "conf": 0.978
+    },
+    {
+     "text": "that",
+     "start": 78.64,
+     "onset": 78.6,
+     "end": 79.02,
+     "conf": 0.971
+    },
+    {
+     "text": "you",
+     "start": 79.4,
+     "onset": 79.4,
+     "end": 79.78,
+     "conf": 0.991
+    },
+    {
+     "text": "want",
+     "start": 80.2,
+     "onset": 80.16,
+     "end": 80.58,
+     "conf": 0.985
+    },
+    {
+     "text": "from",
+     "start": 80.58,
+     "onset": 80.52,
+     "end": 80.86,
+     "conf": 0.975
+    },
+    {
+     "text": "me",
+     "start": 80.86,
+     "onset": 80.84,
+     "end": 81.38,
+     "conf": 0.987
+    },
+    {
+     "text": "want",
+     "start": 81.38,
+     "onset": 81.34,
+     "end": 81.64,
+     "conf": 0.866
+    },
+    {
+     "text": "from",
+     "start": 81.78,
+     "onset": 81.72,
+     "end": 82.02,
+     "conf": 0.955
+    },
+    {
+     "text": "me",
+     "start": 82.04,
+     "onset": 82.02,
+     "end": 82.62,
+     "conf": 0.982
+    }
+   ]
+  },
+  {
+   "start": 83.36,
+   "end": 89.02,
+   "text": "what is it that you want from me want from me",
+   "words": [
+    {
+     "text": "what",
+     "start": 83.36,
+     "onset": 83.32,
+     "end": 83.58,
+     "conf": 0.957
+    },
+    {
+     "text": "is",
+     "start": 83.58,
+     "onset": 83.58,
+     "end": 83.96,
+     "conf": 0.662
+    },
+    {
+     "text": "it",
+     "start": 84.26,
+     "onset": 84.26,
+     "end": 84.6,
+     "conf": 0.965
+    },
+    {
+     "text": "that",
+     "start": 85.02,
+     "onset": 84.98,
+     "end": 85.4,
+     "conf": 0.98
+    },
+    {
+     "text": "you",
+     "start": 85.82,
+     "onset": 85.82,
+     "end": 86.18,
+     "conf": 0.987
+    },
+    {
+     "text": "want",
+     "start": 86.58,
+     "onset": 86.56,
+     "end": 86.82,
+     "conf": 0.986
+    },
+    {
+     "text": "from",
+     "start": 86.98,
+     "onset": 86.94,
+     "end": 87.24,
+     "conf": 0.976
+    },
+    {
+     "text": "me",
+     "start": 87.26,
+     "onset": 87.24,
+     "end": 87.8,
+     "conf": 0.987
+    },
+    {
+     "text": "want",
+     "start": 87.8,
+     "onset": 87.78,
+     "end": 88.16,
+     "conf": 0.975
+    },
+    {
+     "text": "from",
+     "start": 88.18,
+     "onset": 88.12,
+     "end": 88.44,
+     "conf": 0.954
+    },
+    {
+     "text": "me",
+     "start": 88.44,
+     "onset": 88.42,
+     "end": 89.02,
+     "conf": 0.978
+    }
+   ]
+  },
+  {
+   "start": 89.02,
+   "end": 93.98,
+   "text": "i want you to feel i want you to feel",
+   "words": [
+    {
+     "text": "i",
+     "start": 89.02,
+     "onset": 89.02,
+     "end": 89.16,
+     "conf": 0.986
+    },
+    {
+     "text": "want",
+     "start": 89.18,
+     "onset": 89.16,
+     "end": 89.38,
+     "conf": 0.987
+    },
+    {
+     "text": "you",
+     "start": 89.38,
+     "onset": 89.38,
+     "end": 89.54,
+     "conf": 0.989
+    },
+    {
+     "text": "to",
+     "start": 89.56,
+     "onset": 89.54,
+     "end": 89.76,
+     "conf": 0.985
+    },
+    {
+     "text": "feel",
+     "start": 89.88,
+     "onset": 89.86,
+     "end": 90.66,
+     "conf": 0.985
+    },
+    {
+     "text": "i",
+     "start": 92.12,
+     "onset": 92.12,
+     "end": 92.32,
+     "conf": 0.99
+    },
+    {
+     "text": "want",
+     "start": 92.32,
+     "onset": 92.3,
+     "end": 92.54,
+     "conf": 0.988
+    },
+    {
+     "text": "you",
+     "start": 92.56,
+     "onset": 92.56,
+     "end": 92.74,
+     "conf": 0.99
+    },
+    {
+     "text": "to",
+     "start": 92.74,
+     "onset": 92.72,
+     "end": 93.1,
+     "conf": 0.988
+    },
+    {
+     "text": "feel",
+     "start": 93.1,
+     "onset": 93.08,
+     "end": 93.98,
+     "conf": 0.988
+    }
+   ]
+  },
+  {
+   "start": 95.34,
+   "end": 100.18,
+   "text": "i want you to feel i want you to feel",
+   "words": [
+    {
+     "text": "i",
+     "start": 95.34,
+     "onset": 95.34,
+     "end": 95.52,
+     "conf": 0.986
+    },
+    {
+     "text": "want",
+     "start": 95.52,
+     "onset": 95.5,
+     "end": 95.7,
+     "conf": 0.989
+    },
+    {
+     "text": "you",
+     "start": 95.74,
+     "onset": 95.74,
+     "end": 95.94,
+     "conf": 0.988
+    },
+    {
+     "text": "to",
+     "start": 95.94,
+     "onset": 95.9,
+     "end": 96.32,
+     "conf": 0.987
+    },
+    {
+     "text": "feel",
+     "start": 96.32,
+     "onset": 96.28,
+     "end": 97.06,
+     "conf": 0.986
+    },
+    {
+     "text": "i",
+     "start": 98.5,
+     "onset": 98.5,
+     "end": 98.68,
+     "conf": 0.985
+    },
+    {
+     "text": "want",
+     "start": 98.7,
+     "onset": 98.68,
+     "end": 98.94,
+     "conf": 0.99
+    },
+    {
+     "text": "you",
+     "start": 98.94,
+     "onset": 98.94,
+     "end": 99.14,
+     "conf": 0.99
+    },
+    {
+     "text": "to",
+     "start": 99.14,
+     "onset": 99.12,
+     "end": 99.46,
+     "conf": 0.982
+    },
+    {
+     "text": "feel",
+     "start": 99.48,
+     "onset": 99.46,
+     "end": 100.18,
+     "conf": 0.984
+    }
+   ]
+  },
+  {
+   "start": 105.4,
+   "end": 107.4,
+   "text": "i'm a feather in the wind",
+   "words": [
+    {
+     "text": "i'm",
+     "start": 105.4,
+     "onset": 105.4,
+     "end": 105.54,
+     "conf": 0.991
+    },
+    {
+     "text": "a",
+     "start": 105.56,
+     "onset": 105.56,
+     "end": 105.8,
+     "conf": 0.98
+    },
+    {
+     "text": "feather",
+     "start": 105.8,
+     "onset": 105.76,
+     "end": 106.22,
+     "conf": 0.866
+    },
+    {
+     "text": "in",
+     "start": 106.22,
+     "onset": 106.22,
+     "end": 106.4,
+     "conf": 0.984
+    },
+    {
+     "text": "the",
+     "start": 106.42,
+     "onset": 106.38,
+     "end": 106.68,
+     "conf": 0.99
+    },
+    {
+     "text": "wind",
+     "start": 106.7,
+     "onset": 106.66,
+     "end": 107.4,
+     "conf": 0.979
+    }
+   ]
+  },
+  {
+   "start": 109.04,
+   "end": 112.22,
+   "text": "carried away by all that you say",
+   "words": [
+    {
+     "text": "carried",
+     "start": 109.04,
+     "onset": 109.0,
+     "end": 109.54,
+     "conf": 0.947
+    },
+    {
+     "text": "away",
+     "start": 109.56,
+     "onset": 109.56,
+     "end": 110.12,
+     "conf": 0.989
+    },
+    {
+     "text": "by",
+     "start": 110.18,
+     "onset": 110.14,
+     "end": 110.6,
+     "conf": 0.988
+    },
+    {
+     "text": "all",
+     "start": 110.6,
+     "onset": 110.6,
+     "end": 110.9,
+     "conf": 0.77
+    },
+    {
+     "text": "that",
+     "start": 110.92,
+     "onset": 110.88,
+     "end": 111.16,
+     "conf": 0.454
+    },
+    {
+     "text": "you",
+     "start": 111.16,
+     "onset": 111.16,
+     "end": 111.52,
+     "conf": 0.928
+    },
+    {
+     "text": "say",
+     "start": 111.54,
+     "onset": 111.48,
+     "end": 112.22,
+     "conf": 0.967
+    }
+   ]
+  },
+  {
+   "start": 112.22,
+   "end": 115.76,
+   "text": "sitting on thin air",
+   "words": [
+    {
+     "text": "sitting",
+     "start": 112.22,
+     "onset": 112.14,
+     "end": 112.72,
+     "conf": 0.661
+    },
+    {
+     "text": "on",
+     "start": 112.72,
+     "onset": 112.72,
+     "end": 112.98,
+     "conf": 0.765
+    },
+    {
+     "text": "thin",
+     "start": 113.06,
+     "onset": 113.0,
+     "end": 113.72,
+     "conf": 0.941
+    },
+    {
+     "text": "air",
+     "start": 114.26,
+     "onset": 114.26,
+     "end": 115.76,
+     "conf": 0.817
+    }
+   ]
+  },
+  {
+   "start": 118.16,
+   "end": 120.8,
+   "text": "i'm a loss to my friends",
+   "words": [
+    {
+     "text": "i'm",
+     "start": 118.16,
+     "onset": 118.16,
+     "end": 118.26,
+     "conf": 0.924
+    },
+    {
+     "text": "a",
+     "start": 118.34,
+     "onset": 118.34,
+     "end": 118.54,
+     "conf": 0.453
+    },
+    {
+     "text": "loss",
+     "start": 118.56,
+     "onset": 118.54,
+     "end": 118.88,
+     "conf": 0.398
+    },
+    {
+     "text": "to",
+     "start": 118.9,
+     "onset": 118.84,
+     "end": 119.1,
+     "conf": 0.44
+    },
+    {
+     "text": "my",
+     "start": 119.12,
+     "onset": 119.1,
+     "end": 119.44,
+     "conf": 0.471
+    },
+    {
+     "text": "friends",
+     "start": 119.44,
+     "onset": 119.38,
+     "end": 120.8,
+     "conf": 0.906
+    }
+   ]
+  },
+  {
+   "start": 121.8,
+   "end": 124.74,
+   "text": "too unpersuaded by all they're saying",
+   "words": [
+    {
+     "text": "too",
+     "start": 121.8,
+     "onset": 121.74,
+     "end": 122.08,
+     "conf": 0.925
+    },
+    {
+     "text": "unpersuaded",
+     "start": 122.08,
+     "onset": 122.08,
+     "end": 123.32,
+     "conf": 0.803
+    },
+    {
+     "text": "by",
+     "start": 123.38,
+     "onset": 123.36,
+     "end": 123.66,
+     "conf": 0.963
+    },
+    {
+     "text": "all",
+     "start": 123.68,
+     "onset": 123.68,
+     "end": 123.92,
+     "conf": 0.292
+    },
+    {
+     "text": "they're",
+     "start": 123.94,
+     "onset": 123.9,
+     "end": 124.22,
+     "conf": 0.384
+    },
+    {
+     "text": "saying",
+     "start": 124.22,
+     "onset": 124.16,
+     "end": 124.74,
+     "conf": 0.501
+    }
+   ]
+  },
+  {
+   "start": 124.74,
+   "end": 130.72,
+   "text": "and you can't pretend to care yeah",
+   "words": [
+    {
+     "text": "and",
+     "start": 124.74,
+     "onset": 124.74,
+     "end": 124.94,
+     "conf": 0.895
+    },
+    {
+     "text": "you",
+     "start": 124.94,
+     "onset": 124.94,
+     "end": 125.1,
+     "conf": 0.984
+    },
+    {
+     "text": "can't",
+     "start": 125.24,
+     "onset": 125.2,
+     "end": 125.44,
+     "conf": 0.828
+    },
+    {
+     "text": "pretend",
+     "start": 125.52,
+     "onset": 125.48,
+     "end": 127.38,
+     "conf": 0.959
+    },
+    {
+     "text": "to",
+     "start": 127.78,
+     "onset": 127.74,
+     "end": 127.88,
+     "conf": 0.987
+    },
+    {
+     "text": "care",
+     "start": 128.1,
+     "onset": 128.04,
+     "end": 129.88,
+     "conf": 0.954
+    },
+    {
+     "text": "yeah",
+     "start": 129.96,
+     "onset": 129.96,
+     "end": 130.72,
+     "conf": 0.326
+    }
+   ]
+  },
+  {
+   "start": 130.72,
+   "end": 133.84,
+   "text": "yeah i was reckless in the past",
+   "words": [
+    {
+     "text": "yeah",
+     "start": 130.72,
+     "onset": 130.72,
+     "end": 130.98,
+     "conf": 0.391
+    },
+    {
+     "text": "i",
+     "start": 130.98,
+     "onset": 130.98,
+     "end": 131.16,
+     "conf": 0.985
+    },
+    {
+     "text": "was",
+     "start": 131.16,
+     "onset": 131.14,
+     "end": 131.4,
+     "conf": 0.987
+    },
+    {
+     "text": "reckless",
+     "start": 131.4,
+     "onset": 131.38,
+     "end": 132.22,
+     "conf": 0.981
+    },
+    {
+     "text": "in",
+     "start": 132.54,
+     "onset": 132.54,
+     "end": 132.74,
+     "conf": 0.991
+    },
+    {
+     "text": "the",
+     "start": 132.74,
+     "onset": 132.7,
+     "end": 132.86,
+     "conf": 0.991
+    },
+    {
+     "text": "past",
+     "start": 133.06,
+     "onset": 133.02,
+     "end": 133.84,
+     "conf": 0.987
+    }
+   ]
+  },
+  {
+   "start": 134.16,
+   "end": 136.7,
+   "text": "i was see through just like glass",
+   "words": [
+    {
+     "text": "i",
+     "start": 134.16,
+     "onset": 134.16,
+     "end": 134.32,
+     "conf": 0.99
+    },
+    {
+     "text": "was",
+     "start": 134.32,
+     "onset": 134.3,
+     "end": 134.62,
+     "conf": 0.963
+    },
+    {
+     "text": "see",
+     "start": 134.62,
+     "onset": 134.58,
+     "end": 134.94,
+     "conf": 0.966
+    },
+    {
+     "text": "through",
+     "start": 135.0,
+     "onset": 134.94,
+     "end": 135.32,
+     "conf": 0.989
+    },
+    {
+     "text": "just",
+     "start": 135.32,
+     "onset": 135.3,
+     "end": 135.56,
+     "conf": 0.956
+    },
+    {
+     "text": "like",
+     "start": 135.56,
+     "onset": 135.54,
+     "end": 135.82,
+     "conf": 0.896
+    },
+    {
+     "text": "glass",
+     "start": 135.96,
+     "onset": 135.88,
+     "end": 136.7,
+     "conf": 0.894
+    }
+   ]
+  },
+  {
+   "start": 137.16,
+   "end": 140.34,
+   "text": "did all i could to make this last",
+   "words": [
+    {
+     "text": "did",
+     "start": 137.16,
+     "onset": 137.12,
+     "end": 137.34,
+     "conf": 0.91
+    },
+    {
+     "text": "all",
+     "start": 137.34,
+     "onset": 137.34,
+     "end": 137.52,
+     "conf": 0.935
+    },
+    {
+     "text": "i",
+     "start": 137.52,
+     "onset": 137.52,
+     "end": 137.9,
+     "conf": 0.97
+    },
+    {
+     "text": "could",
+     "start": 137.9,
+     "onset": 137.84,
+     "end": 138.84,
+     "conf": 0.964
+    },
+    {
+     "text": "to",
+     "start": 138.84,
+     "onset": 138.8,
+     "end": 139.02,
+     "conf": 0.956
+    },
+    {
+     "text": "make",
+     "start": 139.02,
+     "onset": 139.0,
+     "end": 139.24,
+     "conf": 0.972
+    },
+    {
+     "text": "this",
+     "start": 139.24,
+     "onset": 139.2,
+     "end": 139.6,
+     "conf": 0.967
+    },
+    {
+     "text": "last",
+     "start": 139.6,
+     "onset": 139.58,
+     "end": 140.34,
+     "conf": 0.91
+    }
+   ]
+  },
+  {
+   "start": 140.34,
+   "end": 143.02,
+   "text": "so how could you be such an ass",
+   "words": [
+    {
+     "text": "so",
+     "start": 140.34,
+     "onset": 140.32,
+     "end": 140.5,
+     "conf": 0.988
+    },
+    {
+     "text": "how",
+     "start": 140.54,
+     "onset": 140.52,
+     "end": 140.72,
+     "conf": 0.991
+    },
+    {
+     "text": "could",
+     "start": 140.76,
+     "onset": 140.74,
+     "end": 140.9,
+     "conf": 0.995
+    },
+    {
+     "text": "you",
+     "start": 141.02,
+     "onset": 141.02,
+     "end": 141.3,
+     "conf": 0.994
+    },
+    {
+     "text": "be",
+     "start": 141.4,
+     "onset": 141.38,
+     "end": 141.8,
+     "conf": 0.994
+    },
+    {
+     "text": "such",
+     "start": 141.8,
+     "onset": 141.76,
+     "end": 142.08,
+     "conf": 0.992
+    },
+    {
+     "text": "an",
+     "start": 142.08,
+     "onset": 142.08,
+     "end": 142.36,
+     "conf": 0.975
+    },
+    {
+     "text": "ass",
+     "start": 142.46,
+     "onset": 142.46,
+     "end": 143.02,
+     "conf": 0.584
+    }
+   ]
+  },
+  {
+   "start": 143.02,
+   "end": 149.5,
+   "text": "i know where the good boys go to hide the pain hide the pain",
+   "words": [
+    {
+     "text": "i",
+     "start": 143.02,
+     "onset": 143.02,
+     "end": 143.3,
+     "conf": 0.98
+    },
+    {
+     "text": "know",
+     "start": 143.3,
+     "onset": 143.26,
+     "end": 143.52,
+     "conf": 0.979
+    },
+    {
+     "text": "where",
+     "start": 143.62,
+     "onset": 143.58,
+     "end": 143.86,
+     "conf": 0.82
+    },
+    {
+     "text": "the",
+     "start": 143.86,
+     "onset": 143.82,
+     "end": 144.02,
+     "conf": 0.983
+    },
+    {
+     "text": "good",
+     "start": 144.28,
+     "onset": 144.24,
+     "end": 144.94,
+     "conf": 0.99
+    },
+    {
+     "text": "boys",
+     "start": 144.96,
+     "onset": 144.94,
+     "end": 145.78,
+     "conf": 0.984
+    },
+    {
+     "text": "go",
+     "start": 145.78,
+     "onset": 145.74,
+     "end": 146.56,
+     "conf": 0.99
+    },
+    {
+     "text": "to",
+     "start": 146.56,
+     "onset": 146.5,
+     "end": 147.34,
+     "conf": 0.982
+    },
+    {
+     "text": "hide",
+     "start": 147.44,
+     "onset": 147.4,
+     "end": 147.68,
+     "conf": 0.557
+    },
+    {
+     "text": "the",
+     "start": 147.74,
+     "onset": 147.7,
+     "end": 147.86,
+     "conf": 0.98
+    },
+    {
+     "text": "pain",
+     "start": 148.06,
+     "onset": 148.02,
+     "end": 148.62,
+     "conf": 0.988
+    },
+    {
+     "text": "hide",
+     "start": 148.62,
+     "onset": 148.6,
+     "end": 148.9,
+     "conf": 0.615
+    },
+    {
+     "text": "the",
+     "start": 148.92,
+     "onset": 148.88,
+     "end": 149.04,
+     "conf": 0.985
+    },
+    {
+     "text": "pain",
+     "start": 149.18,
+     "onset": 149.14,
+     "end": 149.5,
+     "conf": 0.982
+    }
+   ]
+  },
+  {
+   "start": 149.5,
+   "end": 156.06,
+   "text": "but that don't mean i die when you don't",
+   "words": [
+    {
+     "text": "but",
+     "start": 149.5,
+     "onset": 149.48,
+     "end": 149.74,
+     "conf": 0.984
+    },
+    {
+     "text": "that",
+     "start": 149.74,
+     "onset": 149.7,
+     "end": 149.9,
+     "conf": 0.899
+    },
+    {
+     "text": "don't",
+     "start": 149.9,
+     "onset": 149.88,
+     "end": 150.14,
+     "conf": 0.803
+    },
+    {
+     "text": "mean",
+     "start": 150.14,
+     "onset": 150.12,
+     "end": 150.34,
+     "conf": 0.869
+    },
+    {
+     "text": "i",
+     "start": 150.34,
+     "onset": 150.34,
+     "end": 150.5,
+     "conf": 0.089
+    },
+    {
+     "text": "die",
+     "start": 150.62,
+     "onset": 150.56,
+     "end": 151.72,
+     "conf": 0.8
+    },
+    {
+     "text": "when",
+     "start": 153.12,
+     "onset": 153.08,
+     "end": 153.34,
+     "conf": 0.952
+    },
+    {
+     "text": "you",
+     "start": 153.34,
+     "onset": 153.34,
+     "end": 153.7,
+     "conf": 0.984
+    },
+    {
+     "text": "don't",
+     "start": 153.84,
+     "onset": 153.78,
+     "end": 156.06,
+     "conf": 0.503
+    }
+   ]
+  },
+  {
+   "start": 156.98,
+   "end": 162.6,
+   "text": "what is it that you want from me want from me",
+   "words": [
+    {
+     "text": "what",
+     "start": 156.98,
+     "onset": 156.94,
+     "end": 157.18,
+     "conf": 0.986
+    },
+    {
+     "text": "is",
+     "start": 157.18,
+     "onset": 157.18,
+     "end": 157.52,
+     "conf": 0.981
+    },
+    {
+     "text": "it",
+     "start": 157.8,
+     "onset": 157.8,
+     "end": 158.3,
+     "conf": 0.975
+    },
+    {
+     "text": "that",
+     "start": 158.58,
+     "onset": 158.54,
+     "end": 158.94,
+     "conf": 0.978
+    },
+    {
+     "text": "you",
+     "start": 159.4,
+     "onset": 159.4,
+     "end": 159.74,
+     "conf": 0.989
+    },
+    {
+     "text": "want",
+     "start": 160.2,
+     "onset": 160.18,
+     "end": 160.44,
+     "conf": 0.987
+    },
+    {
+     "text": "from",
+     "start": 160.58,
+     "onset": 160.52,
+     "end": 160.84,
+     "conf": 0.871
+    },
+    {
+     "text": "me",
+     "start": 160.84,
+     "onset": 160.82,
+     "end": 161.38,
+     "conf": 0.989
+    },
+    {
+     "text": "want",
+     "start": 161.38,
+     "onset": 161.36,
+     "end": 161.62,
+     "conf": 0.976
+    },
+    {
+     "text": "from",
+     "start": 161.8,
+     "onset": 161.74,
+     "end": 162.04,
+     "conf": 0.86
+    },
+    {
+     "text": "me",
+     "start": 162.04,
+     "onset": 162.02,
+     "end": 162.6,
+     "conf": 0.983
+    }
+   ]
+  },
+  {
+   "start": 163.4,
+   "end": 168.72,
+   "text": "what is it that you want from me want from me",
+   "words": [
+    {
+     "text": "what",
+     "start": 163.4,
+     "onset": 163.36,
+     "end": 163.6,
+     "conf": 0.965
+    },
+    {
+     "text": "is",
+     "start": 163.6,
+     "onset": 163.6,
+     "end": 163.98,
+     "conf": 0.93
+    },
+    {
+     "text": "it",
+     "start": 164.24,
+     "onset": 164.24,
+     "end": 164.56,
+     "conf": 0.964
+    },
+    {
+     "text": "that",
+     "start": 165.04,
+     "onset": 165.0,
+     "end": 165.38,
+     "conf": 0.979
+    },
+    {
+     "text": "you",
+     "start": 165.82,
+     "onset": 165.82,
+     "end": 166.2,
+     "conf": 0.986
+    },
+    {
+     "text": "want",
+     "start": 166.62,
+     "onset": 166.58,
+     "end": 166.84,
+     "conf": 0.954
+    },
+    {
+     "text": "from",
+     "start": 166.98,
+     "onset": 166.94,
+     "end": 167.22,
+     "conf": 0.879
+    },
+    {
+     "text": "me",
+     "start": 167.22,
+     "onset": 167.2,
+     "end": 167.78,
+     "conf": 0.985
+    },
+    {
+     "text": "want",
+     "start": 167.78,
+     "onset": 167.76,
+     "end": 168.16,
+     "conf": 0.978
+    },
+    {
+     "text": "from",
+     "start": 168.16,
+     "onset": 168.1,
+     "end": 168.4,
+     "conf": 0.864
+    },
+    {
+     "text": "me",
+     "start": 168.4,
+     "onset": 168.38,
+     "end": 168.72,
+     "conf": 0.978
+    }
+   ]
+  },
+  {
+   "start": 168.98,
+   "end": 173.9,
+   "text": "i want you to feel i want you to feel",
+   "words": [
+    {
+     "text": "i",
+     "start": 168.98,
+     "onset": 168.98,
+     "end": 169.16,
+     "conf": 0.987
+    },
+    {
+     "text": "want",
+     "start": 169.16,
+     "onset": 169.14,
+     "end": 169.38,
+     "conf": 0.99
+    },
+    {
+     "text": "you",
+     "start": 169.38,
+     "onset": 169.38,
+     "end": 169.58,
+     "conf": 0.988
+    },
+    {
+     "text": "to",
+     "start": 169.58,
+     "onset": 169.54,
+     "end": 169.92,
+     "conf": 0.99
+    },
+    {
+     "text": "feel",
+     "start": 169.92,
+     "onset": 169.9,
+     "end": 170.92,
+     "conf": 0.989
+    },
+    {
+     "text": "i",
+     "start": 172.1,
+     "onset": 172.1,
+     "end": 172.28,
+     "conf": 0.99
+    },
+    {
+     "text": "want",
+     "start": 172.28,
+     "onset": 172.26,
+     "end": 172.54,
+     "conf": 0.991
+    },
+    {
+     "text": "you",
+     "start": 172.54,
+     "onset": 172.54,
+     "end": 172.74,
+     "conf": 0.989
+    },
+    {
+     "text": "to",
+     "start": 172.74,
+     "onset": 172.7,
+     "end": 173.08,
+     "conf": 0.983
+    },
+    {
+     "text": "feel",
+     "start": 173.08,
+     "onset": 173.06,
+     "end": 173.9,
+     "conf": 0.989
+    }
+   ]
+  },
+  {
+   "start": 175.3,
+   "end": 180.42,
+   "text": "i want you to feel i want you to feel",
+   "words": [
+    {
+     "text": "i",
+     "start": 175.3,
+     "onset": 175.3,
+     "end": 175.5,
+     "conf": 0.987
+    },
+    {
+     "text": "want",
+     "start": 175.5,
+     "onset": 175.48,
+     "end": 175.7,
+     "conf": 0.99
+    },
+    {
+     "text": "you",
+     "start": 175.76,
+     "onset": 175.76,
+     "end": 175.96,
+     "conf": 0.989
+    },
+    {
+     "text": "to",
+     "start": 175.96,
+     "onset": 175.94,
+     "end": 176.32,
+     "conf": 0.988
+    },
+    {
+     "text": "feel",
+     "start": 176.32,
+     "onset": 176.28,
+     "end": 177.22,
+     "conf": 0.988
+    },
+    {
+     "text": "i",
+     "start": 178.54,
+     "onset": 178.54,
+     "end": 178.72,
+     "conf": 0.99
+    },
+    {
+     "text": "want",
+     "start": 178.72,
+     "onset": 178.7,
+     "end": 178.96,
+     "conf": 0.99
+    },
+    {
+     "text": "you",
+     "start": 178.96,
+     "onset": 178.96,
+     "end": 179.16,
+     "conf": 0.989
+    },
+    {
+     "text": "to",
+     "start": 179.16,
+     "onset": 179.14,
+     "end": 179.54,
+     "conf": 0.987
+    },
+    {
+     "text": "feel",
+     "start": 179.54,
+     "onset": 179.5,
+     "end": 180.42,
+     "conf": 0.977
+    }
+   ]
+  },
+  {
+   "start": 182.62,
+   "end": 188.24,
+   "text": "what is it that you want from me want from me",
+   "words": [
+    {
+     "text": "what",
+     "start": 182.62,
+     "onset": 182.58,
+     "end": 182.84,
+     "conf": 0.979
+    },
+    {
+     "text": "is",
+     "start": 182.84,
+     "onset": 182.84,
+     "end": 183.28,
+     "conf": 0.971
+    },
+    {
+     "text": "it",
+     "start": 183.46,
+     "onset": 183.46,
+     "end": 184.02,
+     "conf": 0.977
+    },
+    {
+     "text": "that",
+     "start": 184.24,
+     "onset": 184.2,
+     "end": 184.82,
+     "conf": 0.983
+    },
+    {
+     "text": "you",
+     "start": 185.04,
+     "onset": 185.04,
+     "end": 185.46,
+     "conf": 0.987
+    },
+    {
+     "text": "want",
+     "start": 185.84,
+     "onset": 185.82,
+     "end": 186.18,
+     "conf": 0.989
+    },
+    {
+     "text": "from",
+     "start": 186.18,
+     "onset": 186.14,
+     "end": 186.44,
+     "conf": 0.978
+    },
+    {
+     "text": "me",
+     "start": 186.44,
+     "onset": 186.42,
+     "end": 187.0,
+     "conf": 0.986
+    },
+    {
+     "text": "want",
+     "start": 187.0,
+     "onset": 186.98,
+     "end": 187.36,
+     "conf": 0.976
+    },
+    {
+     "text": "from",
+     "start": 187.36,
+     "onset": 187.32,
+     "end": 187.64,
+     "conf": 0.964
+    },
+    {
+     "text": "me",
+     "start": 187.64,
+     "onset": 187.62,
+     "end": 188.24,
+     "conf": 0.975
+    }
+   ]
+  },
+  {
+   "start": 189.02,
+   "end": 194.58,
+   "text": "what is it that you want from me want from me",
+   "words": [
+    {
+     "text": "what",
+     "start": 189.02,
+     "onset": 188.98,
+     "end": 189.22,
+     "conf": 0.983
+    },
+    {
+     "text": "is",
+     "start": 189.22,
+     "onset": 189.22,
+     "end": 189.86,
+     "conf": 0.982
+    },
+    {
+     "text": "it",
+     "start": 189.86,
+     "onset": 189.86,
+     "end": 190.38,
+     "conf": 0.975
+    },
+    {
+     "text": "that",
+     "start": 190.62,
+     "onset": 190.58,
+     "end": 191.42,
+     "conf": 0.976
+    },
+    {
+     "text": "you",
+     "start": 191.42,
+     "onset": 191.42,
+     "end": 191.94,
+     "conf": 0.983
+    },
+    {
+     "text": "want",
+     "start": 192.2,
+     "onset": 192.16,
+     "end": 192.58,
+     "conf": 0.925
+    },
+    {
+     "text": "from",
+     "start": 192.58,
+     "onset": 192.54,
+     "end": 192.88,
+     "conf": 0.97
+    },
+    {
+     "text": "me",
+     "start": 192.88,
+     "onset": 192.86,
+     "end": 193.42,
+     "conf": 0.982
+    },
+    {
+     "text": "want",
+     "start": 193.42,
+     "onset": 193.38,
+     "end": 193.78,
+     "conf": 0.895
+    },
+    {
+     "text": "from",
+     "start": 193.78,
+     "onset": 193.74,
+     "end": 194.04,
+     "conf": 0.958
+    },
+    {
+     "text": "me",
+     "start": 194.04,
+     "onset": 194.02,
+     "end": 194.58,
+     "conf": 0.973
+    }
+   ]
+  },
+  {
+   "start": 194.58,
+   "end": 200.0,
+   "text": "i want you to feel i want you to feel",
+   "words": [
+    {
+     "text": "i",
+     "start": 194.58,
+     "onset": 194.58,
+     "end": 194.74,
+     "conf": 0.973
+    },
+    {
+     "text": "want",
+     "start": 194.74,
+     "onset": 194.72,
+     "end": 194.96,
+     "conf": 0.981
+    },
+    {
+     "text": "you",
+     "start": 194.96,
+     "onset": 194.96,
+     "end": 195.14,
+     "conf": 0.981
+    },
+    {
+     "text": "to",
+     "start": 195.14,
+     "onset": 195.12,
+     "end": 195.42,
+     "conf": 0.982
+    },
+    {
+     "text": "feel",
+     "start": 195.52,
+     "onset": 195.5,
+     "end": 196.18,
+     "conf": 0.981
+    },
+    {
+     "text": "i",
+     "start": 197.76,
+     "onset": 197.76,
+     "end": 197.94,
+     "conf": 0.972
+    },
+    {
+     "text": "want",
+     "start": 197.94,
+     "onset": 197.92,
+     "end": 198.18,
+     "conf": 0.983
+    },
+    {
+     "text": "you",
+     "start": 198.18,
+     "onset": 198.18,
+     "end": 198.36,
+     "conf": 0.985
+    },
+    {
+     "text": "to",
+     "start": 198.36,
+     "onset": 198.34,
+     "end": 198.8,
+     "conf": 0.985
+    },
+    {
+     "text": "feel",
+     "start": 198.8,
+     "onset": 198.76,
+     "end": 200.0,
+     "conf": 0.983
+    }
+   ]
+  },
+  {
+   "start": 200.96,
+   "end": 207.42,
+   "text": "i want you to feel i want you to feel",
+   "words": [
+    {
+     "text": "i",
+     "start": 200.96,
+     "onset": 200.96,
+     "end": 201.14,
+     "conf": 0.985
+    },
+    {
+     "text": "want",
+     "start": 201.14,
+     "onset": 201.12,
+     "end": 201.36,
+     "conf": 0.988
+    },
+    {
+     "text": "you",
+     "start": 201.36,
+     "onset": 201.36,
+     "end": 201.54,
+     "conf": 0.989
+    },
+    {
+     "text": "to",
+     "start": 201.54,
+     "onset": 201.5,
+     "end": 201.92,
+     "conf": 0.987
+    },
+    {
+     "text": "feel",
+     "start": 201.92,
+     "onset": 201.88,
+     "end": 203.22,
+     "conf": 0.986
+    },
+    {
+     "text": "i",
+     "start": 204.16,
+     "onset": 204.16,
+     "end": 204.34,
+     "conf": 0.979
+    },
+    {
+     "text": "want",
+     "start": 204.34,
+     "onset": 204.32,
+     "end": 204.56,
+     "conf": 0.984
+    },
+    {
+     "text": "you",
+     "start": 204.56,
+     "onset": 204.56,
+     "end": 204.74,
+     "conf": 0.987
+    },
+    {
+     "text": "to",
+     "start": 204.74,
+     "onset": 204.7,
+     "end": 204.98,
+     "conf": 0.885
+    },
+    {
+     "text": "feel",
+     "start": 205.08,
+     "onset": 205.04,
+     "end": 207.42,
+     "conf": 0.98
+    }
+   ]
+  },
+  {
+   "start": 208.3,
+   "end": 213.54,
+   "text": "good boys go to hide the pain hide the pain",
+   "words": [
+    {
+     "text": "good",
+     "start": 208.3,
+     "onset": 208.26,
+     "end": 208.78,
+     "conf": 0.975
+    },
+    {
+     "text": "boys",
+     "start": 209.0,
+     "onset": 208.98,
+     "end": 209.5,
+     "conf": 0.963
+    },
+    {
+     "text": "go",
+     "start": 209.88,
+     "onset": 209.84,
+     "end": 210.32,
+     "conf": 0.975
+    },
+    {
+     "text": "to",
+     "start": 210.62,
+     "onset": 210.56,
+     "end": 210.9,
+     "conf": 0.957
+    },
+    {
+     "text": "hide",
+     "start": 211.46,
+     "onset": 211.42,
+     "end": 211.7,
+     "conf": 0.477
+    },
+    {
+     "text": "the",
+     "start": 211.76,
+     "onset": 211.72,
+     "end": 211.82,
+     "conf": 0.975
+    },
+    {
+     "text": "pain",
+     "start": 212.06,
+     "onset": 212.02,
+     "end": 212.48,
+     "conf": 0.981
+    },
+    {
+     "text": "hide",
+     "start": 212.66,
+     "onset": 212.64,
+     "end": 212.86,
+     "conf": 0.477
+    },
+    {
+     "text": "the",
+     "start": 212.98,
+     "onset": 212.94,
+     "end": 213.22,
+     "conf": 0.979
+    },
+    {
+     "text": "pain",
+     "start": 213.22,
+     "onset": 213.18,
+     "end": 213.54,
+     "conf": 0.975
+    }
+   ]
+  },
+  {
+   "start": 213.54,
+   "end": 218.56,
+   "text": "cause you won't see me cry when i'm done",
+   "words": [
+    {
+     "text": "cause",
+     "start": 213.54,
+     "onset": 213.52,
+     "end": 213.74,
+     "conf": 0.982
+    },
+    {
+     "text": "you",
+     "start": 213.74,
+     "onset": 213.74,
+     "end": 213.92,
+     "conf": 0.986
+    },
+    {
+     "text": "won't",
+     "start": 213.92,
+     "onset": 213.9,
+     "end": 214.18,
+     "conf": 0.973
+    },
+    {
+     "text": "see",
+     "start": 214.18,
+     "onset": 214.14,
+     "end": 214.34,
+     "conf": 0.964
+    },
+    {
+     "text": "me",
+     "start": 214.34,
+     "onset": 214.32,
+     "end": 214.46,
+     "conf": 0.98
+    },
+    {
+     "text": "cry",
+     "start": 214.64,
+     "onset": 214.58,
+     "end": 215.14,
+     "conf": 0.974
+    },
+    {
+     "text": "when",
+     "start": 217.2,
+     "onset": 217.16,
+     "end": 217.44,
+     "conf": 0.986
+    },
+    {
+     "text": "i'm",
+     "start": 217.44,
+     "onset": 217.44,
+     "end": 217.72,
+     "conf": 0.989
+    },
+    {
+     "text": "done",
+     "start": 217.84,
+     "onset": 217.8,
+     "end": 218.56,
+     "conf": 0.897
+    }
+   ]
+  },
+  {
+   "start": 219.76,
+   "end": 226.34,
+   "text": "i know where the good boys go to hide the pain hide the pain",
+   "words": [
+    {
+     "text": "i",
+     "start": 219.76,
+     "onset": 219.76,
+     "end": 220.04,
+     "conf": 0.985
+    },
+    {
+     "text": "know",
+     "start": 220.04,
+     "onset": 220.0,
+     "end": 220.34,
+     "conf": 0.338
+    },
+    {
+     "text": "where",
+     "start": 220.44,
+     "onset": 220.4,
+     "end": 220.64,
+     "conf": 0.371
+    },
+    {
+     "text": "the",
+     "start": 220.64,
+     "onset": 220.6,
+     "end": 220.84,
+     "conf": 0.415
+    },
+    {
+     "text": "good",
+     "start": 221.1,
+     "onset": 221.06,
+     "end": 221.54,
+     "conf": 0.42
+    },
+    {
+     "text": "boys",
+     "start": 221.82,
+     "onset": 221.78,
+     "end": 222.66,
+     "conf": 0.349
+    },
+    {
+     "text": "go",
+     "start": 222.66,
+     "onset": 222.62,
+     "end": 223.22,
+     "conf": 0.367
+    },
+    {
+     "text": "to",
+     "start": 223.42,
+     "onset": 223.36,
+     "end": 223.76,
+     "conf": 0.366
+    },
+    {
+     "text": "hide",
+     "start": 224.24,
+     "onset": 224.2,
+     "end": 224.46,
+     "conf": 0.256
+    },
+    {
+     "text": "the",
+     "start": 224.58,
+     "onset": 224.54,
+     "end": 224.68,
+     "conf": 0.456
+    },
+    {
+     "text": "pain",
+     "start": 224.86,
+     "onset": 224.82,
+     "end": 225.3,
+     "conf": 0.276
+    },
+    {
+     "text": "hide",
+     "start": 225.44,
+     "onset": 225.4,
+     "end": 225.68,
+     "conf": 0.21
+    },
+    {
+     "text": "the",
+     "start": 225.76,
+     "onset": 225.72,
+     "end": 225.92,
+     "conf": 0.411
+    },
+    {
+     "text": "pain",
+     "start": 226.04,
+     "onset": 226.0,
+     "end": 226.34,
+     "conf": 0.249
+    }
+   ]
+  },
+  {
+   "start": 226.34,
+   "end": 231.26,
+   "text": "but that don't mean i die when you don't",
+   "words": [
+    {
+     "text": "but",
+     "start": 226.34,
+     "onset": 226.32,
+     "end": 226.6,
+     "conf": 0.345
+    },
+    {
+     "text": "that",
+     "start": 226.6,
+     "onset": 226.56,
+     "end": 226.78,
+     "conf": 0.394
+    },
+    {
+     "text": "don't",
+     "start": 226.8,
+     "onset": 226.78,
+     "end": 227.04,
+     "conf": 0.363
+    },
+    {
+     "text": "mean",
+     "start": 227.04,
+     "onset": 227.02,
+     "end": 227.28,
+     "conf": 0.403
+    },
+    {
+     "text": "i",
+     "start": 227.28,
+     "onset": 227.28,
+     "end": 227.62,
+     "conf": 0.291
+    },
+    {
+     "text": "die",
+     "start": 227.66,
+     "onset": 227.62,
+     "end": 228.38,
+     "conf": 0.315
+    },
+    {
+     "text": "when",
+     "start": 229.96,
+     "onset": 229.92,
+     "end": 230.22,
+     "conf": 0.393
+    },
+    {
+     "text": "you",
+     "start": 230.22,
+     "onset": 230.22,
+     "end": 230.66,
+     "conf": 0.389
+    },
+    {
+     "text": "don't",
+     "start": 230.66,
+     "onset": 230.62,
+     "end": 231.26,
+     "conf": 0.412
+    }
+   ]
+  }
+ ]
+}
